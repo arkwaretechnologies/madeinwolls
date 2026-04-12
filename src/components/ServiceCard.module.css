@@ -7,7 +7,7 @@
   align-items: center;
   gap: 14px;
   cursor: pointer;
-  transition: all 0.18s;
+  transition: border-color 0.25s, background 0.25s, transform 0.25s, box-shadow 0.25s;
   text-decoration: none;
   color: inherit;
 }
@@ -15,6 +15,13 @@
 .card:hover {
   border-color: var(--green);
   background: var(--green-light);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(45, 80, 22, 0.08);
+}
+
+.card:active {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 8px rgba(45, 80, 22, 0.06);
 }
 
 .highlight {
@@ -85,6 +92,12 @@
   font-size: 22px;
   color: var(--stone);
   flex-shrink: 0;
+  transition: transform 0.25s, color 0.25s;
+}
+
+.card:hover .arrow {
+  transform: translateX(3px);
+  color: var(--green);
 }
 
 .highlight .arrow {

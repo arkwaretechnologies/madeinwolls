@@ -1,4 +1,6 @@
 import Link from "next/link";
+import BookOpenButton from "./BookOpenButton";
+import FadeIn from "./FadeIn";
 import styles from "./ServicePageLayout.module.css";
 
 interface PricingTier {
@@ -30,15 +32,23 @@ export default function ServicePageLayout({
     <div className={styles.page}>
       <section className={styles.heroSection}>
         <div className={styles.heroInner}>
-          <div className={styles.breadcrumb}>
-            <Link href="/">Home</Link> / <Link href="/services">Services</Link> /{" "}
-            <span>{title.split("—")[0].trim()}</span>
-          </div>
-          <h1 className={styles.heroTitle}>{title}</h1>
-          <p className={styles.heroSub}>{intro}</p>
-          <Link href="/contact" className={styles.heroBtn}>
-            Book This Service →
-          </Link>
+          <FadeIn variant="fade">
+            <div className={styles.breadcrumb}>
+              <Link href="/">Home</Link> / <Link href="/services">Services</Link> /{" "}
+              <span>{title.split("—")[0].trim()}</span>
+            </div>
+          </FadeIn>
+          <FadeIn variant="up" delay={0.1}>
+            <h1 className={styles.heroTitle}>{title}</h1>
+          </FadeIn>
+          <FadeIn variant="up" delay={0.25}>
+            <p className={styles.heroSub}>{intro}</p>
+          </FadeIn>
+          <FadeIn variant="up" delay={0.4}>
+            <BookOpenButton className={styles.heroBtn}>
+              Book This Service →
+            </BookOpenButton>
+          </FadeIn>
         </div>
       </section>
 
@@ -74,14 +84,16 @@ export default function ServicePageLayout({
           <div className={styles.sectionLabel}>Pricing</div>
           <h2 className={styles.sectionHeading}>Transparent, Flat-Rate Pricing</h2>
           <div className={styles.pricingGrid}>
-            {pricing.map((tier) => (
-              <div key={tier.name} className={styles.pricingCard}>
-                <div className={styles.pricingName}>{tier.name}</div>
-                <div className={styles.pricingPrice}>{tier.price}</div>
-                {tier.desc && (
-                  <div className={styles.pricingDesc}>{tier.desc}</div>
-                )}
-              </div>
+            {pricing.map((tier, i) => (
+              <FadeIn key={tier.name} variant="up" staggerIndex={i} staggerDelay={0.08}>
+                <div className={styles.pricingCard}>
+                  <div className={styles.pricingName}>{tier.name}</div>
+                  <div className={styles.pricingPrice}>{tier.price}</div>
+                  {tier.desc && (
+                    <div className={styles.pricingDesc}>{tier.desc}</div>
+                  )}
+                </div>
+              </FadeIn>
             ))}
           </div>
 
@@ -95,9 +107,9 @@ export default function ServicePageLayout({
           </div>
 
           <div style={{ textAlign: "center", marginTop: 32 }}>
-            <Link href="/contact" className={styles.heroBtn}>
+            <BookOpenButton className={styles.heroBtn}>
               Book This Service →
-            </Link>
+            </BookOpenButton>
           </div>
         </div>
       </section>

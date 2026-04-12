@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -7,8 +8,13 @@ export default function Footer() {
       <div className={styles.footerInner}>
         <div className={styles.footerTop}>
           <div className={styles.brandCol}>
-            <div className={styles.brandName}>Made in Wolls</div>
-            <div className={styles.brandSub}>Cleaning &amp; Property Care</div>
+            <Image
+              src="/images/madeinwollslogo.png"
+              alt="Made in Wolls — Cleaning & Property Care"
+              width={180}
+              height={90}
+              className={styles.logo}
+            />
             <p className={styles.brandDesc}>
               Crafting cleanliness in every corner. Premium cleaning services trusted
               by Sydney families since day one.

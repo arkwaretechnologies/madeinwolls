@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Inter, DM_Serif_Display } from "next/font/google";
+import Providers from "@/components/Providers";
 import "./globals.css";
 
 const plusJakarta = Plus_Jakarta_Sans({
@@ -50,7 +51,7 @@ export default function RootLayout({
       className={`${plusJakarta.variable} ${inter.variable} ${dmSerif.variable}`}
     >
       <body style={{ fontFamily: "var(--font-jakarta), sans-serif" }}>
-        {children}
+        <Providers>{children}</Providers>
       </body>
     </html>
   );

@@ -1,3 +1,4 @@
+import FadeIn from "./FadeIn";
 import styles from "./ValuesSection.module.css";
 
 const values = [
@@ -27,17 +28,21 @@ export default function ValuesSection() {
   return (
     <section className={styles.section}>
       <div className={styles.sectionInner}>
-        <div className={styles.label}>Our Values</div>
-        <div className={styles.heading}>What We Stand For</div>
+        <FadeIn variant="up">
+          <div className={styles.label}>Our Values</div>
+          <div className={styles.heading}>What We Stand For</div>
+        </FadeIn>
         <div className={styles.grid}>
-          {values.map((v) => (
-            <div key={v.title} className={styles.card}>
-              <div className={styles.iconWrap}>{v.icon}</div>
-              <div>
-                <div className={styles.cardTitle}>{v.title}</div>
-                <div className={styles.cardText}>{v.text}</div>
+          {values.map((v, i) => (
+            <FadeIn key={v.title} variant="up" staggerIndex={i} staggerDelay={0.1}>
+              <div className={styles.card}>
+                <div className={styles.iconWrap}>{v.icon}</div>
+                <div>
+                  <div className={styles.cardTitle}>{v.title}</div>
+                  <div className={styles.cardText}>{v.text}</div>
+                </div>
               </div>
-            </div>
+            </FadeIn>
           ))}
         </div>
       </div>

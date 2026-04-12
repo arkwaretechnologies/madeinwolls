@@ -1,4 +1,4 @@
-import Link from "next/link";
+import BookOpenButton from "./BookOpenButton";
 import styles from "./CTABlock.module.css";
 
 export default function CTABlock() {
@@ -11,9 +11,9 @@ export default function CTABlock() {
           Book online in 60 seconds. Same-day quotes available. Police-checked,
           insured team ready to serve you across Sydney.
         </p>
-        <Link href="/contact" className={styles.btnMain}>
+        <BookOpenButton className={styles.btnMain}>
           Book a Clean Now →
-        </Link>
+        </BookOpenButton>
         <div className={styles.orText}>— or call us directly —</div>
         <div className={styles.phoneRow}>
           <span className={styles.phoneIcon}>📞</span>

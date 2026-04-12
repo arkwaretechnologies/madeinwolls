@@ -1,9 +1,9 @@
 .trustBar {
   background: var(--green);
   padding: 16px 20px;
-  display: flex;
-  gap: 0;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior-x: contain;
   scrollbar-width: none;
 }
 
@@ -46,6 +46,15 @@
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
   white-space: nowrap;
+}
+
+@media (max-width: 767px) {
+  .trustBarInner {
+    width: max-content;
+    max-width: none;
+    margin-inline: 0;
+    justify-content: flex-start;
+  }
 }
 
 @media (min-width: 768px) {

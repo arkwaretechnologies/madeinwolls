@@ -57,6 +57,13 @@
   font-size: 13px;
   font-weight: 500;
   color: var(--charcoal);
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.chip:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+  border-color: var(--sage);
 }
 
 .chipGreen {
@@ -64,6 +71,11 @@
   color: white;
   border-color: var(--green);
   font-weight: 600;
+}
+
+.chipGreen:hover {
+  box-shadow: 0 4px 14px rgba(45, 80, 22, 0.2);
+  border-color: var(--green-mid);
 }
 
 @media (min-width: 768px) {

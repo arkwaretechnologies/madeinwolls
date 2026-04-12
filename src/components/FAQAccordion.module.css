@@ -9,11 +9,13 @@
   border: 1px solid var(--stone);
   border-radius: 14px;
   overflow: hidden;
-  transition: border-color 0.18s;
+  transition: border-color 0.25s, box-shadow 0.25s, transform 0.25s;
 }
 
 .item:hover {
   border-color: var(--sage);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transform: translateY(-1px);
 }
 
 .question {
@@ -52,7 +54,7 @@
 .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease, padding 0.3s ease;
+  transition: max-height 0.35s cubic-bezier(0.16, 1, 0.3, 1), padding 0.35s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .answerOpen {

@@ -9,6 +9,8 @@ import ReviewCard from "@/components/ReviewCard";
 import WhyUs from "@/components/WhyUs";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
+import AboutIntroVideo from "@/components/AboutIntroVideo";
 import styles from "./home.module.css";
 
 const services = [
@@ -104,28 +106,48 @@ export default function HomePage() {
       {/* Introduction */}
       <section className={styles.intro}>
         <div className={styles.introInner}>
-          <div className={styles.label}>About Us</div>
-          <h2 className={styles.heading}>
-            Premium Care for Sydney&apos;s Finest Homes
-          </h2>
-          <div className={styles.goldRule} />
-          <p className={styles.bodyText}>
-            Made in Wolls Cleaning Services is a premium residential and commercial
-            cleaning company based in Wollstonecraft, Sydney. Founded by Maychelle
-            Anlap, we specialise in regular home cleaning, spring and deep cleans,
-            end of lease and bond cleans, office cleaning and Airbnb turnaround
-            cleans.
-          </p>
-          <p className={styles.bodyText}>
-            Our police-checked, fully insured team services the Lower North Shore,
-            Northern Beaches and City of Sydney — delivering consistent, high-quality
-            results backed by a 100% satisfaction guarantee.
-          </p>
-          <p className={styles.bodyText}>
-            We are not a marketplace or an app. We are a real, locally owned cleaning
-            business with a dedicated team, structured processes and a genuine
-            commitment to the homes and businesses we care for.
-          </p>
+          <div className={styles.introLayout}>
+            <FadeIn variant="up">
+              <AboutIntroVideo
+                mediaClassName={styles.introMedia}
+                videoClassName={styles.introVideo}
+              />
+            </FadeIn>
+            <div className={styles.introText}>
+              <FadeIn variant="up">
+                <div className={styles.label}>About Us</div>
+                <h2 className={styles.heading}>
+                  Premium Care for Sydney&apos;s Finest Homes
+                </h2>
+              </FadeIn>
+              <FadeIn variant="fade" delay={0.15}>
+                <div className={styles.goldRule} />
+              </FadeIn>
+              <FadeIn variant="up" delay={0.2}>
+                <p className={styles.bodyText}>
+                  Made in Wolls Cleaning Services is a premium residential and commercial
+                  cleaning company based in Wollstonecraft, Sydney. Founded by Maychelle
+                  Anlap, we specialise in regular home cleaning, spring and deep cleans,
+                  end of lease and bond cleans, office cleaning and Airbnb turnaround
+                  cleans.
+                </p>
+              </FadeIn>
+              <FadeIn variant="up" delay={0.3}>
+                <p className={styles.bodyText}>
+                  Our police-checked, fully insured team services the Lower North Shore,
+                  Northern Beaches and City of Sydney — delivering consistent, high-quality
+                  results backed by a 100% satisfaction guarantee.
+                </p>
+              </FadeIn>
+              <FadeIn variant="up" delay={0.4}>
+                <p className={styles.bodyText}>
+                  We are not a marketplace or an app. We are a real, locally owned cleaning
+                  business with a dedicated team, structured processes and a genuine
+                  commitment to the homes and businesses we care for.
+                </p>
+              </FadeIn>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -134,40 +156,52 @@ export default function HomePage() {
       {/* Services */}
       <section className={styles.services}>
         <div className={styles.servicesInner}>
-          <div className={styles.label}>What We Do</div>
-          <h2 className={styles.heading}>Sydney&apos;s Premium Cleaning Services</h2>
-          <p className={styles.bodyText}>
-            From weekly home maintenance to full bond cleans and commercial spaces,
-            Made in Wolls delivers a consistently exceptional standard of cleaning
-            across Sydney. Every service is backed by our detailed job checklist,
-            satisfaction guarantee and police-checked team.
-          </p>
+          <FadeIn variant="up">
+            <div className={styles.label}>What We Do</div>
+            <h2 className={styles.heading}>Sydney&apos;s Premium Cleaning Services</h2>
+            <p className={styles.bodyText}>
+              From weekly home maintenance to full bond cleans and commercial spaces,
+              Made in Wolls delivers a consistently exceptional standard of cleaning
+              across Sydney. Every service is backed by our detailed job checklist,
+              satisfaction guarantee and police-checked team.
+            </p>
+          </FadeIn>
           <div className={styles.serviceList}>
-            {services.map((svc) => (
-              <ServiceCard key={svc.name} {...svc} />
+            {services.map((svc, i) => (
+              <FadeIn key={svc.name} variant="up" staggerIndex={i} staggerDelay={0.06}>
+                <ServiceCard {...svc} />
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
-      <QuoteStrip />
+      <FadeIn variant="up">
+        <QuoteStrip />
+      </FadeIn>
       <AreaChips />
 
       {/* Reviews */}
       <section className={styles.reviews}>
         <div className={styles.reviewsInner}>
-          <div className={styles.label}>Client Reviews</div>
-          <h2 className={styles.heading}>Trusted by Sydney Families</h2>
+          <FadeIn variant="up">
+            <div className={styles.label}>Client Reviews</div>
+            <h2 className={styles.heading}>Trusted by Sydney Families</h2>
+          </FadeIn>
           <div className={styles.reviewStack}>
-            {reviews.map((review) => (
-              <ReviewCard key={review.author} {...review} />
+            {reviews.map((review, i) => (
+              <FadeIn key={review.author} variant="up" staggerIndex={i} staggerDelay={0.1}>
+                <ReviewCard {...review} />
+              </FadeIn>
             ))}
           </div>
         </div>
       </section>
 
       <WhyUs />
-      <CTABlock />
+      <FadeIn variant="scale">
+        <CTABlock />
+      </FadeIn>
       <Footer />
     </>
   );

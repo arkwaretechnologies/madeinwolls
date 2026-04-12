@@ -1,7 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
+import BookOpenButton from "./BookOpenButton";
 import styles from "./Navbar.module.css";
 
 const navLinks = [
@@ -16,14 +18,28 @@ const navLinks = [
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
 
   return (
     <>
-      <nav className={styles.nav}>
+      <nav className={`${styles.nav} ${scrolled ? styles.navScrolled : ""}`}>
         <div className={styles.navInner}>
           <Link href="/" className={styles.brand}>
-            <div className={styles.brandName}>Made in Wolls</div>
-            <div className={styles.brandSub}>Cleaning &amp; Property Care</div>
+            <Image
+              src="/images/madeinwollslogo.png"
+              alt="Made in Wolls — Cleaning & Property Care"
+              width={160}
+              height={80}
+              className={styles.logo}
+              priority
+            />
           </Link>
 
           <div className={styles.desktopLinks}>
@@ -38,9 +54,7 @@ export default function Navbar() {
             <a href="tel:0410721027" className={styles.phoneLink}>
               📞 0410 721 027
             </a>
-            <Link href="/contact" className={styles.cta}>
-              Book Now
-            </Link>
+            <BookOpenButton className={styles.cta}>Book Now</BookOpenButton>
             <button
               className={styles.hamburger}
               onClick={() => setMenuOpen(true)}
@@ -63,8 +77,13 @@ export default function Navbar() {
             className={styles.brand}
             onClick={() => setMenuOpen(false)}
           >
-            <div className={styles.brandName}>Made in Wolls</div>
-            <div className={styles.brandSub}>Cleaning &amp; Property Care</div>
+            <Image
+              src="/images/madeinwollslogo.png"
+              alt="Made in Wolls — Cleaning & Property Care"
+              width={140}
+              height={70}
+              className={styles.logo}
+            />
           </Link>
           <button
             className={styles.closeBtn}
@@ -85,13 +104,12 @@ export default function Navbar() {
             </Link>
           ))}
         </div>
-        <Link
-          href="/contact"
+        <BookOpenButton
           className={styles.mobileCta}
-          onClick={() => setMenuOpen(false)}
+          onBeforeOpen={() => setMenuOpen(false)}
         >
           Book a Clean →
-        </Link>
+        </BookOpenButton>
         <a href="tel:0410721027" className={styles.mobilePhone}>
           📞 0410 721 027
         </a>

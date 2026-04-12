@@ -1,3 +1,4 @@
+import FadeIn from "./FadeIn";
 import styles from "./AreaChips.module.css";
 
 const regions = [
@@ -67,32 +68,36 @@ export default function AreaChips() {
   return (
     <section className={styles.section}>
       <div className={styles.sectionInner}>
-        <div className={styles.label}>Where We Clean</div>
-        <div className={styles.heading}>
-          Servicing Sydney&apos;s Premium Suburbs
-        </div>
-        <p className={styles.intro}>
-          Made in Wolls provides professional cleaning services across
-          Sydney&apos;s most sought-after neighbourhoods. Whether you&apos;re in
-          the Lower North Shore, Northern Beaches or City of Sydney, our team is
-          ready to deliver.
-        </p>
-        {regions.map((region) => (
-          <div key={region.name}>
-            <div className={styles.regionTitle}>{region.name}</div>
-            <div className={styles.chipGrid}>
-              {region.suburbs.map((suburb) => (
-                <span
-                  key={suburb}
-                  className={`${styles.chip} ${
-                    region.highlighted.includes(suburb) ? styles.chipGreen : ""
-                  }`}
-                >
-                  {suburb}
-                </span>
-              ))}
-            </div>
+        <FadeIn variant="up">
+          <div className={styles.label}>Where We Clean</div>
+          <div className={styles.heading}>
+            Servicing Sydney&apos;s Premium Suburbs
           </div>
+          <p className={styles.intro}>
+            Made in Wolls provides professional cleaning services across
+            Sydney&apos;s most sought-after neighbourhoods. Whether you&apos;re in
+            the Lower North Shore, Northern Beaches or City of Sydney, our team is
+            ready to deliver.
+          </p>
+        </FadeIn>
+        {regions.map((region, ri) => (
+          <FadeIn key={region.name} variant="up" staggerIndex={ri} staggerDelay={0.12}>
+            <div>
+              <div className={styles.regionTitle}>{region.name}</div>
+              <div className={styles.chipGrid}>
+                {region.suburbs.map((suburb) => (
+                  <span
+                    key={suburb}
+                    className={`${styles.chip} ${
+                      region.highlighted.includes(suburb) ? styles.chipGreen : ""
+                    }`}
+                  >
+                    {suburb}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </FadeIn>
         ))}
       </div>
     </section>

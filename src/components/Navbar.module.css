@@ -2,13 +2,21 @@
   position: sticky;
   top: 0;
   z-index: 100;
-  background: var(--warm-white);
+  background: rgba(250, 248, 243, 0.85);
   padding: 14px 20px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid var(--stone);
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: background 0.35s, box-shadow 0.35s, border-color 0.35s;
+}
+
+.navScrolled {
+  background: rgba(250, 248, 243, 0.97);
+  box-shadow: 0 1px 12px rgba(0, 0, 0, 0.06);
+  border-bottom-color: transparent;
 }
 
 .navInner {
@@ -23,21 +31,14 @@
 .brand {
   line-height: 1.1;
   text-decoration: none;
+  display: flex;
+  align-items: center;
 }
 
-.brandName {
-  font-size: 16px;
-  font-weight: 800;
-  color: var(--green);
-  letter-spacing: -0.03em;
-}
-
-.brandSub {
-  font-size: 9px;
-  font-weight: 600;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  color: var(--gold);
+.logo {
+  width: auto;
+  height: 48px;
+  object-fit: contain;
 }
 
 .desktopLinks {
@@ -50,12 +51,31 @@
   font-size: 14px;
   font-weight: 600;
   color: var(--charcoal);
-  transition: color 0.18s;
+  transition: color 0.2s;
   letter-spacing: -0.01em;
+  position: relative;
+}
+
+.desktopLinks a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: var(--green);
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .desktopLinks a:hover {
   color: var(--green);
+}
+
+.desktopLinks a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 .navActions {
@@ -84,13 +104,20 @@
   cursor: pointer;
   font-family: inherit;
   letter-spacing: -0.01em;
-  transition: background 0.18s;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
   text-decoration: none;
   display: inline-block;
 }
 
 .cta:hover {
   background: var(--green-mid);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(45, 80, 22, 0.2);
+}
+
+.cta:active {
+  transform: translateY(0);
+  box-shadow: none;
 }
 
 .hamburger {
@@ -113,7 +140,6 @@
 }
 
 .mobileMenu {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -123,10 +149,18 @@
   z-index: 200;
   flex-direction: column;
   padding: 20px;
+  display: flex;
+  opacity: 0;
+  transform: translateX(100%);
+  pointer-events: none;
+  transition: opacity 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+              transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .mobileMenuOpen {
-  display: flex;
+  opacity: 1;
+  transform: translateX(0);
+  pointer-events: auto;
 }
 
 .mobileMenuHeader {
@@ -193,12 +227,8 @@
     padding: 16px 40px;
   }
 
-  .brandName {
-    font-size: 18px;
-  }
-
-  .brandSub {
-    font-size: 10px;
+  .logo {
+    height: 54px;
   }
 
   .phoneLink {
@@ -219,7 +249,7 @@
     display: none;
   }
 
-  .brandName {
-    font-size: 20px;
+  .logo {
+    height: 60px;
   }
 }

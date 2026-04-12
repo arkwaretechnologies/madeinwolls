@@ -4,8 +4,34 @@
 }
 
 .introInner {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.introLayout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+  align-items: center;
+}
+
+.introMedia {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--stone);
+  background: var(--charcoal);
+  line-height: 0;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
+}
+
+.introVideo {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.introText {
+  min-width: 0;
 }
 
 .label {
@@ -31,6 +57,7 @@
   height: 2px;
   background: var(--gold);
   margin: 16px 0;
+  transform-origin: left;
 }
 
 .bodyText {
@@ -77,6 +104,14 @@
   flex-direction: column;
   gap: 12px;
   margin-top: 20px;
+}
+
+@media (min-width: 900px) {
+  .introLayout {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 48px;
+    align-items: center;
+  }
 }
 
 @media (min-width: 768px) {
