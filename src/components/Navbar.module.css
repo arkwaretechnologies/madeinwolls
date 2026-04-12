@@ -1,0 +1,225 @@
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--warm-white);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--stone);
+  backdrop-filter: blur(10px);
+}
+
+.navInner {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brand {
+  line-height: 1.1;
+  text-decoration: none;
+}
+
+.brandName {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--green);
+  letter-spacing: -0.03em;
+}
+
+.brandSub {
+  font-size: 9px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.desktopLinks {
+  display: none;
+  gap: 28px;
+  align-items: center;
+}
+
+.desktopLinks a {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--charcoal);
+  transition: color 0.18s;
+  letter-spacing: -0.01em;
+}
+
+.desktopLinks a:hover {
+  color: var(--green);
+}
+
+.navActions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.phoneLink {
+  display: none;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.cta {
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 22px;
+  padding: 10px 20px;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: -0.01em;
+  transition: background 0.18s;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.cta:hover {
+  background: var(--green-mid);
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--charcoal);
+  border-radius: 2px;
+  transition: all 0.3s;
+}
+
+.mobileMenu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--warm-white);
+  z-index: 200;
+  flex-direction: column;
+  padding: 20px;
+}
+
+.mobileMenuOpen {
+  display: flex;
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.closeBtn {
+  font-size: 28px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--charcoal);
+  padding: 4px;
+}
+
+.mobileLinks {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.mobileLinks a {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--charcoal);
+  padding: 16px 0;
+  border-bottom: 1px solid var(--stone);
+  letter-spacing: -0.02em;
+}
+
+.mobileLinks a:hover {
+  color: var(--green);
+}
+
+.mobileCta {
+  margin-top: 32px;
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 17px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+}
+
+.mobilePhone {
+  margin-top: 16px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--green);
+}
+
+@media (min-width: 768px) {
+  .nav {
+    padding: 16px 40px;
+  }
+
+  .brandName {
+    font-size: 18px;
+  }
+
+  .brandSub {
+    font-size: 10px;
+  }
+
+  .phoneLink {
+    display: flex;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nav {
+    padding: 16px 60px;
+  }
+
+  .desktopLinks {
+    display: flex;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .brandName {
+    font-size: 20px;
+  }
+}

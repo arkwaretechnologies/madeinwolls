@@ -1,0 +1,172 @@
+.heroSection {
+  background: var(--green);
+  padding: 48px 20px 56px;
+}
+
+.heroInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter), sans-serif;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heroTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.heroSub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+}
+
+.content {
+  padding: 48px 20px;
+  background: var(--warm-white);
+}
+
+.contentInner {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.goldRule {
+  width: 40px;
+  height: 2px;
+  background: var(--gold);
+  margin: 16px 0;
+}
+
+.bodyText {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 16px;
+}
+
+.divider {
+  height: 1px;
+  background: var(--stone);
+  margin: 36px 0;
+}
+
+.whyGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.whyCard {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 16px;
+  padding: 24px 20px;
+}
+
+.whyIcon {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.whyTitle {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+}
+
+.whyText {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  color: var(--grey);
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 64px 40px 72px;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .content {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .bodyText {
+    font-size: 15px;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 80px 60px 88px;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+  }
+
+  .content {
+    padding: 80px 60px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .whyGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

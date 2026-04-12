@@ -1,0 +1,92 @@
+.section {
+  padding: 48px 20px;
+  background: var(--cloud);
+}
+
+.sectionInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 8px;
+}
+
+.intro {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 20px;
+  max-width: 600px;
+}
+
+.regionTitle {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.chipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chip {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 22px;
+  padding: 7px 16px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--charcoal);
+}
+
+.chipGreen {
+  background: var(--green);
+  color: white;
+  border-color: var(--green);
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .chip {
+    padding: 8px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 80px 60px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+}

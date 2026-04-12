@@ -1,0 +1,144 @@
+.footer {
+  background: var(--charcoal);
+  padding: 40px 20px 48px;
+}
+
+.footerInner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footerTop {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.brandCol {
+  flex: 1;
+}
+
+.brandName {
+  font-size: 20px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.03em;
+}
+
+.brandSub {
+  font-size: 10px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+
+.brandDesc {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 1.7;
+  max-width: 320px;
+}
+
+.linksGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+.linkCol h4 {
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 12px;
+  letter-spacing: -0.01em;
+}
+
+.linkCol a {
+  display: block;
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter), sans-serif;
+  margin-bottom: 8px;
+  transition: color 0.18s;
+}
+
+.linkCol a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.contactCol {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.contactItem {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.contactItem a {
+  color: rgba(255, 255, 255, 0.7);
+  transition: color 0.18s;
+}
+
+.contactItem a:hover {
+  color: white;
+}
+
+.divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.08);
+  margin: 32px 0;
+}
+
+.footerBottom {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.copy {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.25);
+  font-family: var(--font-inter), sans-serif;
+  line-height: 1.7;
+}
+
+.tagline {
+  font-size: 12px;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.35);
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .footer {
+    padding: 56px 40px 48px;
+  }
+
+  .footerTop {
+    flex-direction: row;
+  }
+
+  .linksGrid {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
+
+  .footerBottom {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .footer {
+    padding: 64px 60px 48px;
+  }
+}

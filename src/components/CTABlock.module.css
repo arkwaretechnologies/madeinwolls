@@ -1,0 +1,126 @@
+.section {
+  padding: 56px 20px;
+  background: var(--dark-green);
+  text-align: center;
+}
+
+.sectionInner {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 14px;
+}
+
+.heading {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.sub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.65);
+  line-height: 1.65;
+  margin-bottom: 28px;
+}
+
+.btnMain {
+  width: 100%;
+  max-width: 400px;
+  background: var(--gold);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 18px;
+  font-size: 16px;
+  font-weight: 800;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: -0.02em;
+  margin-bottom: 16px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  transition: opacity 0.18s;
+}
+
+.btnMain:hover {
+  opacity: 0.9;
+}
+
+.orText {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.3);
+  margin-bottom: 14px;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.phoneRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.phoneIcon {
+  font-size: 18px;
+}
+
+.phoneText {
+  font-size: 17px;
+  font-weight: 700;
+  color: white;
+  letter-spacing: -0.01em;
+}
+
+.phoneSub {
+  font-size: 11px;
+  color: rgba(255, 255, 255, 0.45);
+  margin-top: 2px;
+  font-family: var(--font-inter), sans-serif;
+}
+
+.phoneLink {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media (min-width: 768px) {
+  .section {
+    padding: 80px 40px;
+  }
+
+  .heading {
+    font-size: 36px;
+  }
+
+  .sub {
+    font-size: 15px;
+  }
+
+  .btnMain {
+    font-size: 17px;
+    padding: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section {
+    padding: 100px 60px;
+  }
+
+  .heading {
+    font-size: 42px;
+  }
+}

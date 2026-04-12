@@ -1,0 +1,276 @@
+.heroSection {
+  background: var(--green);
+  padding: 48px 20px 56px;
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter), sans-serif;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heroTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.heroSub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.content {
+  padding: 48px 20px;
+  background: var(--warm-white);
+}
+
+.contentInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.contactCard {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 16px;
+  padding: 24px 20px;
+}
+
+.contactItem {
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+  padding: 8px 0;
+}
+
+.contactIcon {
+  font-size: 24px;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.contactLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--grey);
+  margin-bottom: 2px;
+}
+
+.contactValue {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--charcoal);
+  text-decoration: none;
+  transition: color 0.18s;
+}
+
+.contactValue:hover {
+  color: var(--green);
+}
+
+.contactNote {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 12px;
+  color: var(--grey);
+  margin-top: 2px;
+}
+
+.contactDivider {
+  height: 1px;
+  background: var(--stone);
+  margin: 12px 0;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.formLabel {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.01em;
+}
+
+.formInput,
+.formSelect,
+.formTextarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1.5px solid var(--stone);
+  border-radius: 12px;
+  font-size: 14px;
+  font-family: var(--font-inter), sans-serif;
+  color: var(--charcoal);
+  background: var(--white);
+  transition: border-color 0.18s;
+  outline: none;
+}
+
+.formInput:focus,
+.formSelect:focus,
+.formTextarea:focus {
+  border-color: var(--green);
+}
+
+.formInput::placeholder,
+.formTextarea::placeholder {
+  color: #B0B0B0;
+}
+
+.formTextarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.formSelect {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='7' fill='none'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%235A5A5A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 16px center;
+  padding-right: 40px;
+}
+
+.formBtn {
+  width: 100%;
+  background: var(--green);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  padding: 17px;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+  font-family: inherit;
+  letter-spacing: -0.02em;
+  transition: background 0.18s;
+}
+
+.formBtn:hover {
+  background: var(--green-mid);
+}
+
+.formNote {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 12px;
+  color: var(--grey);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 64px 40px 72px;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .content {
+    padding: 64px 40px;
+  }
+
+  .grid {
+    flex-direction: row;
+  }
+
+  .contactInfo {
+    flex: 1;
+  }
+
+  .formSection {
+    flex: 1.2;
+  }
+
+  .formRow {
+    flex-direction: row;
+  }
+
+  .formRow .formGroup {
+    flex: 1;
+  }
+
+  .heading {
+    font-size: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 80px 60px 88px;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+  }
+
+  .content {
+    padding: 80px 60px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+}

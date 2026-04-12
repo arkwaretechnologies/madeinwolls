@@ -1,0 +1,187 @@
+import type { Metadata } from "next";
+import Link from "next/link";
+import Navbar from "@/components/Navbar";
+import TrustBar from "@/components/TrustBar";
+import Footer from "@/components/Footer";
+import styles from "./contact.module.css";
+
+export const metadata: Metadata = {
+  title: "Contact & Book | Made in Wolls Cleaning Services Sydney",
+  description:
+    "Book a clean or get a same-day quote. Call 0410 721 027 or email info@madeinwolls.com. Made in Wolls — We Clean, We Commit.",
+};
+
+export default function ContactPage() {
+  return (
+    <>
+      <Navbar />
+      <section className={styles.heroSection}>
+        <div className={styles.heroInner}>
+          <div className={styles.breadcrumb}>
+            <Link href="/">Home</Link> / <span>Contact</span>
+          </div>
+          <h1 className={styles.heroTitle}>Book a Clean or Get a Quote</h1>
+          <p className={styles.heroSub}>
+            Ready to experience the Made in Wolls difference? Get in touch today.
+            We respond to all enquiries within 2 hours during business hours.
+          </p>
+        </div>
+      </section>
+
+      <TrustBar />
+
+      <section className={styles.content}>
+        <div className={styles.contentInner}>
+          <div className={styles.grid}>
+            <div className={styles.contactInfo}>
+              <div className={styles.label}>Get in Touch</div>
+              <h2 className={styles.heading}>Contact Details</h2>
+
+              <div className={styles.contactCard}>
+                <div className={styles.contactItem}>
+                  <span className={styles.contactIcon}>📞</span>
+                  <div>
+                    <div className={styles.contactLabel}>Phone</div>
+                    <a href="tel:0410721027" className={styles.contactValue}>
+                      0410 721 027
+                    </a>
+                    <div className={styles.contactNote}>Mon–Sat · 8am–6pm</div>
+                  </div>
+                </div>
+
+                <div className={styles.contactDivider} />
+
+                <div className={styles.contactItem}>
+                  <span className={styles.contactIcon}>✉️</span>
+                  <div>
+                    <div className={styles.contactLabel}>Email</div>
+                    <a
+                      href="mailto:info@madeinwolls.com"
+                      className={styles.contactValue}
+                    >
+                      info@madeinwolls.com
+                    </a>
+                    <div className={styles.contactNote}>
+                      We respond within 2 hours
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.contactDivider} />
+
+                <div className={styles.contactItem}>
+                  <span className={styles.contactIcon}>📍</span>
+                  <div>
+                    <div className={styles.contactLabel}>Address</div>
+                    <div className={styles.contactValue}>
+                      66/10 Hume Street
+                      <br />
+                      Wollstonecraft NSW 2065
+                    </div>
+                  </div>
+                </div>
+
+                <div className={styles.contactDivider} />
+
+                <div className={styles.contactItem}>
+                  <span className={styles.contactIcon}>🌐</span>
+                  <div>
+                    <div className={styles.contactLabel}>Website</div>
+                    <a
+                      href="https://www.madeinwolls.com"
+                      className={styles.contactValue}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      www.madeinwolls.com
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className={styles.formSection}>
+              <div className={styles.label}>Quick Enquiry</div>
+              <h2 className={styles.heading}>Send Us a Message</h2>
+
+              <form className={styles.form}>
+                <div className={styles.formRow}>
+                  <div className={styles.formGroup}>
+                    <label className={styles.formLabel}>First Name</label>
+                    <input
+                      type="text"
+                      className={styles.formInput}
+                      placeholder="Your first name"
+                    />
+                  </div>
+                  <div className={styles.formGroup}>
+                    <label className={styles.formLabel}>Last Name</label>
+                    <input
+                      type="text"
+                      className={styles.formInput}
+                      placeholder="Your last name"
+                    />
+                  </div>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Email</label>
+                  <input
+                    type="email"
+                    className={styles.formInput}
+                    placeholder="your@email.com"
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Phone</label>
+                  <input
+                    type="tel"
+                    className={styles.formInput}
+                    placeholder="0400 000 000"
+                  />
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Service Required</label>
+                  <select className={styles.formSelect} defaultValue="">
+                    <option value="" disabled>
+                      Select a service
+                    </option>
+                    <option>Regular Home Cleaning</option>
+                    <option>Spring &amp; Deep Cleaning</option>
+                    <option>End of Lease / Bond Clean</option>
+                    <option>Office &amp; Commercial Cleaning</option>
+                    <option>Airbnb Cleaning</option>
+                    <option>Church Cleaning</option>
+                    <option>Childcare Cleaning</option>
+                    <option>Carpet Cleaning</option>
+                    <option>Other</option>
+                  </select>
+                </div>
+
+                <div className={styles.formGroup}>
+                  <label className={styles.formLabel}>Message</label>
+                  <textarea
+                    className={styles.formTextarea}
+                    rows={5}
+                    placeholder="Tell us about your cleaning needs, suburb, preferred schedule..."
+                  />
+                </div>
+
+                <button type="submit" className={styles.formBtn}>
+                  Send Enquiry →
+                </button>
+                <p className={styles.formNote}>
+                  We will respond within 2 hours during business hours.
+                </p>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Footer />
+    </>
+  );
+}
