@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TrustBar from "@/components/TrustBar";
@@ -17,22 +18,24 @@ export default function AboutPage() {
   return (
     <>
       <Navbar />
-      <section className={styles.heroSection}>
-        <div className={styles.heroInner}>
-          <div className={styles.breadcrumb}>
-            <Link href="/">Home</Link> / <span>About</span>
+      <div className={styles.aboutBanner}>
+        <section className={styles.heroSection}>
+          <div className={styles.heroInner}>
+            <div className={styles.breadcrumb}>
+              <Link href="/">Home</Link> / <span>About</span>
+            </div>
+            <h1 className={styles.heroTitle}>
+              About Made in Wolls — Premium Cleaning Services, Sydney
+            </h1>
+            <p className={styles.heroSub}>
+              A locally owned cleaning business built on trust, reliability and a
+              genuine commitment to every home we care for.
+            </p>
           </div>
-          <h1 className={styles.heroTitle}>
-            About Made in Wolls — Premium Cleaning Services, Sydney
-          </h1>
-          <p className={styles.heroSub}>
-            A locally owned cleaning business built on trust, reliability and a
-            genuine commitment to every home we care for.
-          </p>
-        </div>
-      </section>
+        </section>
 
-      <TrustBar />
+        <TrustBar onBanner />
+      </div>
 
       <section className={styles.content}>
         <div className={styles.contentInner}>
@@ -50,6 +53,18 @@ export default function AboutPage() {
             families, professionals and businesses across the Northern Beaches,
             North Shore and City of Sydney.
           </p>
+
+          <figure className={styles.featureFigure}>
+            <Image
+              src="/images/Untitled-design-30.png"
+              alt="Made in Wolls — premium cleaning services, Sydney"
+              width={384}
+              height={384}
+              className={styles.featureImage}
+              sizes="(max-width: 800px) 100vw, 800px"
+              priority
+            />
+          </figure>
 
           <div className={styles.divider} />
 

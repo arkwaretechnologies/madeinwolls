@@ -1,5 +1,29 @@
+.aboutBanner {
+  position: relative;
+  background-color: var(--green);
+  background-image: url("/images/Untitled-design-33.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.aboutBanner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 45, 25, 0.42) 0%,
+    rgba(15, 45, 25, 0.22) 100%
+  );
+  pointer-events: none;
+}
+
 .heroSection {
-  background: var(--green);
+  position: relative;
+  z-index: 1;
+  background: transparent;
   padding: 48px 20px 56px;
 }
 
@@ -81,6 +105,22 @@
   color: var(--grey);
   line-height: 1.7;
   margin-bottom: 16px;
+}
+
+.featureFigure {
+  margin: 28px auto 8px;
+  max-width: min(100%, 384px);
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--stone);
+  line-height: 0;
+  background: var(--white);
+}
+
+.featureImage {
+  width: 100%;
+  height: auto;
+  display: block;
 }
 
 .divider {

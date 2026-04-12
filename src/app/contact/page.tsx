@@ -74,7 +74,7 @@ export default function ContactPage() {
                   <div>
                     <div className={styles.contactLabel}>Address</div>
                     <div className={styles.contactValue}>
-                      66/10 Hume Street
+                      8/18 Boronia St
                       <br />
                       Wollstonecraft NSW 2065
                     </div>

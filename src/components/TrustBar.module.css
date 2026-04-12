@@ -1,3 +1,9 @@
+.trustBarOnBanner {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+
 .trustBar {
   background: var(--green);
   padding: 16px 20px;

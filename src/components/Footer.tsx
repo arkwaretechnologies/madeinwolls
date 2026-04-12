@@ -53,7 +53,7 @@ export default function Footer() {
                   ✉️ <a href="mailto:info@madeinwolls.com">info@madeinwolls.com</a>
                 </div>
                 <div className={styles.contactItem}>
-                  📍 66/10 Hume Street, Wollstonecraft NSW 2065
+                  📍 8/18 Boronia St, Wollstonecraft NSW 2065
                 </div>
               </div>
             </div>

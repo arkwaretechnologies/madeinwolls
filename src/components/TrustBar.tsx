@@ -8,9 +8,16 @@ const badges = [
   { icon: "📋", text: "Detailed Job Checklists" },
 ];
 
-export default function TrustBar() {
+type TrustBarProps = {
+  /** Sit on top of a banner image (no solid bar background). */
+  onBanner?: boolean;
+};
+
+export default function TrustBar({ onBanner }: TrustBarProps) {
   return (
-    <div className={styles.trustBar}>
+    <div
+      className={`${styles.trustBar} ${onBanner ? styles.trustBarOnBanner : ""}`}
+    >
       <div className={styles.trustBarInner}>
         {badges.map((badge) => (
           <div key={badge.text} className={styles.item}>
