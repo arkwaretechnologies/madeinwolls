@@ -50,6 +50,7 @@ export default function RootLayout({
     <html
       lang="en"
       className={`${plusJakarta.variable} ${inter.variable} ${dmSerif.variable}`}
+      data-scroll-behavior="smooth"
     >
       <body style={{ fontFamily: "var(--font-jakarta), sans-serif" }}>
         <Providers>{children}</Providers>

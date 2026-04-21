@@ -25,6 +25,10 @@ export type IconName =
   | "clock"
   | "lightbulb"
   | "camera"
+  | "eye"
+  | "target"
+  | "plus"
+  | "minus"
   | "x";
 
 type Props = {
@@ -47,7 +51,7 @@ export default function Icon({ name, className, size = 18, title }: Props) {
   const ariaProps =
     title && title.trim().length > 0
       ? ({ role: "img", "aria-label": title } as const)
-      : ({ "aria-hidden": true } as const);
+      : ({ "aria-hidden": "true" } as const);
 
   return (
     <svg
@@ -226,6 +230,30 @@ const paths: Record<IconName, React.ReactNode> = {
     <>
       <path d="M4 7h4l2-2h4l2 2h4v14H4V7Z" />
       <path d="M12 17a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z" />
+    </>
+  ),
+  eye: (
+    <>
+      <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z" />
+      <circle cx="12" cy="12" r="3" />
+    </>
+  ),
+  target: (
+    <>
+      <circle cx="12" cy="12" r="10" />
+      <circle cx="12" cy="12" r="6" />
+      <circle cx="12" cy="12" r="2" />
+    </>
+  ),
+  plus: (
+    <>
+      <path d="M5 12h14" />
+      <path d="M12 5v14" />
+    </>
+  ),
+  minus: (
+    <>
+      <path d="M5 12h14" />
     </>
   ),
   x: (
