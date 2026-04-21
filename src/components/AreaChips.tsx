@@ -44,12 +44,14 @@ const regions = [
       "Darlinghurst",
       "Surry Hills",
       "Newtown",
+      "Paddington",
       "Glebe",
       "Erskineville",
       "Alexandria",
       "Chippendale",
+      "Bondi",
     ],
-    highlighted: [],
+    highlighted: ["Bondi", "Paddington"],
   },
   {
     name: "North Shore",
@@ -58,6 +60,7 @@ const regions = [
       "Cremorne",
       "Cremorne Point",
       "Northbridge",
+      "Neutral Bay",
       "North Sydney",
     ],
     highlighted: ["Mosman"],
@@ -66,13 +69,13 @@ const regions = [
 
 export default function AreaChips() {
   return (
-    <section className={styles.section}>
+    <section className={styles.section} id="service-areas">
       <div className={styles.sectionInner}>
         <FadeIn variant="up">
           <div className={styles.label}>Where We Clean</div>
-          <div className={styles.heading}>
+          <h2 className={styles.heading}>
             Servicing Sydney&apos;s Premium Suburbs
-          </div>
+          </h2>
           <p className={styles.intro}>
             Made in Wolls provides professional cleaning services across
             Sydney&apos;s most sought-after neighbourhoods. Whether you&apos;re in
@@ -80,25 +83,50 @@ export default function AreaChips() {
             ready to deliver.
           </p>
         </FadeIn>
-        {regions.map((region, ri) => (
-          <FadeIn key={region.name} variant="up" staggerIndex={ri} staggerDelay={0.12}>
-            <div>
-              <div className={styles.regionTitle}>{region.name}</div>
-              <div className={styles.chipGrid}>
-                {region.suburbs.map((suburb) => (
-                  <span
-                    key={suburb}
-                    className={`${styles.chip} ${
-                      region.highlighted.includes(suburb) ? styles.chipGreen : ""
-                    }`}
-                  >
-                    {suburb}
-                  </span>
-                ))}
+
+        <div className={styles.regionsGrid}>
+          {regions.map((region, ri) => (
+            <FadeIn
+              key={region.name}
+              variant="up"
+              staggerIndex={ri}
+              staggerDelay={0.1}
+            >
+              <div className={styles.regionCard}>
+                <h3 className={styles.regionTitle}>{region.name}</h3>
+                <div className={styles.chipGrid}>
+                  {region.suburbs.map((suburb) => (
+                    <span
+                      key={suburb}
+                      className={`${styles.chip} ${
+                        region.highlighted.includes(suburb)
+                          ? styles.chipHighlight
+                          : ""
+                      }`}
+                    >
+                      {suburb}
+                    </span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </FadeIn>
-        ))}
+            </FadeIn>
+          ))}
+        </div>
+
+        <FadeIn variant="up" delay={0.4}>
+          <div className={styles.seoFooter}>
+            <p>
+              Looking for trusted <strong>cleaning services in Mosman</strong>,{" "}
+              <strong>Neutral Bay</strong>, or <strong>Crows Nest</strong>? We
+              specialise in premium <strong>house cleaning in the Lower North Shore</strong>{" "}
+              and <strong>Northern Beaches</strong>. Whether you need a regular
+              clean or <strong>end of lease cleaning in the North Shore</strong>,{" "}
+              <strong>Paddington</strong>, or <strong>Bondi</strong>, our
+              professional team ensures your home is spotless and
+              <strong> North Sydney</strong> ready.
+            </p>
+          </div>
+        </FadeIn>
       </div>
     </section>
   );

@@ -1,11 +1,12 @@
+import Icon, { type IconName } from "./Icon";
 import styles from "./TrustBar.module.css";
 
 const badges = [
-  { icon: "✅", text: "Police-Checked Staff" },
-  { icon: "🛡", text: "Fully Insured" },
-  { icon: "⭐", text: "44 Google Reviews" },
-  { icon: "🌿", text: "Eco-Friendly Products" },
-  { icon: "📋", text: "Detailed Job Checklists" },
+  { icon: "checkCircle" as const, text: "Police-Checked Staff" },
+  { icon: "shield" as const, text: "Fully Insured" },
+  { icon: "star" as const, text: "44 Google Reviews" },
+  { icon: "leaf" as const, text: "Eco-Friendly Products" },
+  { icon: "clipboard" as const, text: "Detailed Job Checklists" },
 ];
 
 type TrustBarProps = {
@@ -19,9 +20,11 @@ export default function TrustBar({ onBanner }: TrustBarProps) {
       className={`${styles.trustBar} ${onBanner ? styles.trustBarOnBanner : ""}`}
     >
       <div className={styles.trustBarInner}>
-        {badges.map((badge) => (
+        {badges.map((badge: { icon: IconName; text: string }) => (
           <div key={badge.text} className={styles.item}>
-            <span className={styles.icon}>{badge.icon}</span>
+            <span className={styles.icon}>
+              <Icon name={badge.icon} size={16} />
+            </span>
             <span className={styles.text}>{badge.text}</span>
           </div>
         ))}

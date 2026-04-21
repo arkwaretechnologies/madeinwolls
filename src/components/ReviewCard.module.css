@@ -19,7 +19,7 @@
 }
 
 .stars {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: 14px;
   letter-spacing: 1px;
 }

@@ -1,5 +1,5 @@
 .strip {
-  background: var(--gold-light);
+  background: var(--secondary-light);
   border-top: 1px solid var(--stone);
   border-bottom: 1px solid var(--stone);
   padding: 22px 20px;
@@ -37,7 +37,7 @@
 }
 
 .btn {
-  background: var(--gold);
+  background: var(--secondary);
   color: white;
   border: none;
   border-radius: 10px;

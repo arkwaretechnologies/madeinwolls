@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "End of Lease Cleaning Sydney | Bond Clean | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function EndOfLeaseCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "End of Lease & Bond Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -28,16 +33,12 @@ export default function EndOfLeaseCleaningPage() {
           "Detailed checklist completed and signed off",
           "Before and after photos available on request",
         ]}
-        pricing={[
-          { name: "Studio / 1 Bedroom", price: "From $320" },
-          { name: "2 to 3 Bedrooms", price: "From $450" },
-          { name: "4+ Bedrooms", price: "From $600", desc: "Quote provided on inspection" },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "✅", text: "Bond Clean Standard" },
-          { icon: "📋", text: "Checklist & Sign-Off" },
-          { icon: "📸", text: "Before & After Photos" },
-          { icon: "⭐", text: "44 Google Reviews" },
+          { icon: "checkCircle" as IconName, text: "Bond Clean Standard" },
+          { icon: "clipboard" as IconName, text: "Checklist & Sign-Off" },
+          { icon: "camera" as IconName, text: "Before & After Photos" },
+          { icon: "star" as IconName, text: "44 Google Reviews" },
         ]}
         suburbs={[
           "Wollstonecraft", "Crows Nest", "Neutral Bay", "Mosman", "Cammeray",

@@ -1,3 +1,4 @@
+import Icon, { type IconName } from "./Icon";
 import Link from "next/link";
 import BookOpenButton from "./BookOpenButton";
 import FadeIn from "./FadeIn";
@@ -14,7 +15,7 @@ interface ServicePageLayoutProps {
   intro: string;
   inclusions: string[];
   pricing: PricingTier[];
-  trustBadges: { icon: string; text: string }[];
+  trustBadges: { icon: IconName; text: string }[];
   suburbs: string[];
   whyChoose?: { title: string; items: string[] };
 }
@@ -88,10 +89,19 @@ export default function ServicePageLayout({
               <FadeIn key={tier.name} variant="up" staggerIndex={i} staggerDelay={0.08}>
                 <div className={styles.pricingCard}>
                   <div className={styles.pricingName}>{tier.name}</div>
-                  <div className={styles.pricingPrice}>{tier.price}</div>
+                  <div className={styles.pricingPrice}>
+                    {tier.price.includes("$") && !tier.price.startsWith("From") && (
+                      <span className={styles.pricingPricePrefix}>From </span>
+                    )}
+                    {tier.price}
+                  </div>
                   {tier.desc && (
                     <div className={styles.pricingDesc}>{tier.desc}</div>
                   )}
+                  <div className={styles.pricingCheckmark}>
+                    <span className={styles.checkIcon}>✓</span>
+                    <span>Professional Service</span>
+                  </div>
                 </div>
               </FadeIn>
             ))}
@@ -100,7 +110,9 @@ export default function ServicePageLayout({
           <div className={styles.trustLine}>
             {trustBadges.map((badge) => (
               <div key={badge.text} className={styles.trustBadge}>
-                <span>{badge.icon}</span>
+                <span className={styles.trustIcon}>
+                  <Icon name={badge.icon} size={18} />
+                </span>
                 <span>{badge.text}</span>
               </div>
             ))}

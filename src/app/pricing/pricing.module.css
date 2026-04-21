@@ -1,78 +1,99 @@
 .heroSection {
-  background: var(--green);
-  padding: 48px 20px 56px;
+  background-color: var(--charcoal);
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("/MadeinWolls-images/MADEINWOLLS-99.JPG");
+  background-size: cover;
+  background-position: center 30%;
+  padding: 160px 20px 120px;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
 }
 
+
+
 .heroInner {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
+  position: relative;
+  z-index: 2;
 }
 
 .breadcrumb {
-  font-size: 12px;
-  color: rgba(255, 255, 255, 0.5);
-  font-family: var(--font-inter), sans-serif;
-  margin-bottom: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  margin-bottom: 24px;
 }
 
 .breadcrumb a {
-  color: rgba(255, 255, 255, 0.5);
-  text-decoration: none;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.2s;
 }
 
 .breadcrumb a:hover {
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--secondary);
 }
 
 .heroTitle {
-  font-size: 28px;
+  font-size: 40px;
   font-weight: 800;
   color: white;
   letter-spacing: -0.04em;
-  line-height: 1.15;
-  margin-bottom: 14px;
+  line-height: 1.1;
+  margin-bottom: 20px;
 }
 
 .heroSub {
   font-family: var(--font-inter), sans-serif;
-  font-size: 15px;
-  color: rgba(255, 255, 255, 0.75);
-  line-height: 1.7;
-  max-width: 640px;
+  font-size: 19px;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 .content {
-  padding: 48px 20px;
+  padding: 80px 20px;
   background: var(--warm-white);
+  margin-top: -40px;
+  position: relative;
+  z-index: 2;
+  border-radius: 40px 40px 0 0;
 }
 
 .contentInner {
-  max-width: 900px;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
 .category {
-  margin-bottom: 36px;
+  margin-bottom: 80px;
+}
+
+.category:last-child {
+  margin-bottom: 0;
 }
 
 .catHeader {
   display: flex;
   align-items: center;
-  gap: 12px;
-  margin-bottom: 16px;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid var(--stone);
 }
 
-.catIcon {
-  font-size: 28px;
-}
+
 
 .catTitle {
-  font-size: 20px;
+  font-size: 26px;
   font-weight: 800;
   color: var(--charcoal);
   letter-spacing: -0.03em;
   text-decoration: none;
-  transition: color 0.18s;
+  transition: color 0.2s;
 }
 
 .catTitle:hover {
@@ -82,98 +103,240 @@
 .tierGrid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 10px;
+  gap: 24px;
 }
 
 .tierCard {
   background: var(--white);
   border: 1px solid var(--stone);
-  border-radius: 14px;
-  padding: 20px 18px;
+  border-radius: 24px;
+  padding: 32px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.tierCard:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.06);
+  border-color: var(--sage);
+}
+
+.popularBadge {
+  position: absolute;
+  top: -12px;
+  left: 32px;
+  background: var(--secondary);
+  color: white;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  box-shadow: 0 4px 8px rgba(200, 151, 10, 0.2);
 }
 
 .tierName {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 4px;
+  color: var(--grey);
+  margin-bottom: 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
 }
 
 .tierPrice {
-  font-size: 24px;
+  font-size: 36px;
   font-weight: 800;
-  color: var(--green);
-  letter-spacing: -0.03em;
+  color: var(--charcoal);
+  letter-spacing: -0.04em;
+  margin-bottom: 8px;
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.tierPricePrefix {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--grey);
 }
 
 .tierDesc {
   font-family: var(--font-inter), sans-serif;
-  font-size: 12px;
+  font-size: 14px;
   color: var(--grey);
-  margin-top: 4px;
+  margin-bottom: 24px;
+}
+
+.featureList {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding-top: 24px;
+  border-top: 1px solid var(--cloud);
+}
+
+.featureItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14px;
+  color: var(--grey);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.checkIcon {
+  color: var(--green);
+  flex-shrink: 0;
+  margin-top: 2px;
 }
 
 .note {
   display: flex;
-  gap: 14px;
-  background: var(--gold-light);
+  gap: 24px;
+  background: var(--secondary-light);
   border: 1px solid var(--stone);
-  border-radius: 16px;
-  padding: 24px 20px;
-  margin-top: 20px;
+  border-radius: 24px;
+  padding: 40px;
+  margin-top: 60px;
+  align-items: center;
 }
 
 .noteIcon {
-  font-size: 28px;
+  width: 64px;
+  height: 64px;
+  background: white;
+  color: var(--secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
   flex-shrink: 0;
+  box-shadow: 0 8px 16px rgba(200, 151, 10, 0.1);
 }
 
 .noteTitle {
-  font-size: 16px;
-  font-weight: 700;
+  font-size: 20px;
+  font-weight: 800;
   color: var(--charcoal);
-  margin-bottom: 4px;
+  margin-bottom: 8px;
 }
 
 .noteText {
   font-family: var(--font-inter), sans-serif;
-  font-size: 13px;
+  font-size: 15px;
   color: var(--grey);
   line-height: 1.6;
 }
 
 @media (min-width: 768px) {
   .heroSection {
-    padding: 64px 40px 72px;
+    padding: 200px 40px 160px;
   }
 
   .heroTitle {
-    font-size: 38px;
+    font-size: 72px;
   }
 
   .content {
-    padding: 64px 40px;
+    padding: 100px 40px;
   }
 
   .tierGrid {
-    grid-template-columns: 1fr 1fr 1fr;
-  }
-
-  .catTitle {
-    font-size: 22px;
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
 @media (min-width: 1024px) {
   .heroSection {
-    padding: 80px 60px 88px;
+    padding: 280px 60px 220px;
   }
 
   .heroTitle {
-    font-size: 44px;
+    font-size: 80px;
   }
 
-  .content {
-    padding: 80px 60px;
+  .tierGrid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .category[data-tiers="1"] .tierGrid {
+    grid-template-columns: 1fr;
+    max-width: 400px;
+  }
+  
+.addOnSection {
+  margin-top: 80px;
+}
+
+.addOnTitle {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.addOnTableWrapper {
+  background: white;
+  border: 1px solid var(--stone);
+  border-radius: 24px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.03);
+}
+
+.addOnTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.addOnTable th {
+  background: var(--green);
+  color: white;
+  padding: 20px 24px;
+  font-size: 14px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.addOnTable td {
+  padding: 20px 24px;
+  border-bottom: 1px solid var(--cloud);
+  font-size: 15px;
+  color: var(--grey);
+  font-family: var(--font-inter), sans-serif;
+}
+
+.addOnTable tr:last-child td {
+  border-bottom: none;
+}
+
+.addOnItem {
+  font-weight: 700;
+  color: var(--charcoal);
+}
+
+.addOnPrice {
+  font-weight: 800;
+  color: var(--green);
+}
+
+.addOnNotes {
+  font-style: italic;
+  font-size: 13px;
+  color: var(--sage);
+}
+
+@media (max-width: 640px) {
+  .addOnTable th:nth-child(3),
+  .addOnTable td:nth-child(3) {
+    display: none;
   }
 }

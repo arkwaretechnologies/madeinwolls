@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Regular Home Cleaning Sydney | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function RegularCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Regular Home Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -26,16 +31,12 @@ export default function RegularCleaningPage() {
           "All floors vacuumed and mopped throughout",
           "Bins emptied and relined",
         ]}
-        pricing={[
-          { name: "Essential", price: "From $140", desc: "1 to 2 bedrooms" },
-          { name: "Standard", price: "From $210", desc: "3 bedrooms" },
-          { name: "Premium", price: "From $295", desc: "4 or more bedrooms" },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "✅", text: "Police-Checked" },
-          { icon: "🛡", text: "Fully Insured" },
-          { icon: "⭐", text: "44 Google Reviews" },
-          { icon: "📋", text: "Job Checklist Included" },
+          { icon: "checkCircle" as IconName, text: "Police-Checked" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
+          { icon: "star" as IconName, text: "44 Google Reviews" },
+          { icon: "clipboard" as IconName, text: "Job Checklist Included" },
         ]}
         suburbs={[
           "Wollstonecraft", "Crows Nest", "Neutral Bay", "Mosman", "Cammeray",

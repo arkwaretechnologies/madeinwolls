@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import Icon from "./Icon";
 import styles from "./Footer.module.css";
 
 export default function Footer() {
@@ -9,7 +10,7 @@ export default function Footer() {
         <div className={styles.footerTop}>
           <div className={styles.brandCol}>
             <Image
-              src="/images/madeinwollslogo.png"
+              src="/images/MIW White Logo.png"
               alt="Made in Wolls — Cleaning & Property Care"
               width={180}
               height={90}
@@ -47,13 +48,13 @@ export default function Footer() {
               <h4>Contact</h4>
               <div className={styles.contactCol}>
                 <div className={styles.contactItem}>
-                  📞 <a href="tel:0410721027">0410 721 027</a>
+                  <Icon name="phone" size={16} /> <a href="tel:0410721027">0410 721 027</a>
                 </div>
                 <div className={styles.contactItem}>
-                  ✉️ <a href="mailto:info@madeinwolls.com">info@madeinwolls.com</a>
+                  <Icon name="mail" size={16} /> <a href="mailto:info@madeinwolls.com">info@madeinwolls.com</a>
                 </div>
                 <div className={styles.contactItem}>
-                  📍 8/18 Boronia St, Wollstonecraft NSW 2065
+                  <Icon name="mapPin" size={16} /> 8/18 Boronia St, Wollstonecraft NSW 2065
                 </div>
               </div>
             </div>

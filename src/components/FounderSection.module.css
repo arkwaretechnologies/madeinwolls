@@ -1,0 +1,135 @@
+.founderSection {
+  padding: 80px 20px;
+  background-color: var(--white);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 32px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.secondaryRule {
+  width: 40px;
+  height: 2px;
+  background: var(--secondary);
+  margin: 16px 0;
+}
+
+.introText {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 16px;
+  color: var(--grey);
+  line-height: 1.7;
+  max-width: 600px;
+  margin-bottom: 48px;
+}
+
+.founderGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+.founderCard {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.imageWrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.profileImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.founderCard:hover .profileImage {
+  transform: scale(1.05);
+}
+
+.imageOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 60%,
+    rgba(15, 45, 25, 0.2) 100%
+  );
+  pointer-events: none;
+}
+
+.founderInfo {
+  flex: 1;
+}
+
+.founderName {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--charcoal);
+  margin-bottom: 4px;
+}
+
+.founderRole {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 16px;
+}
+
+.founderBio {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .founderGrid {
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+  }
+
+  .founderSection {
+    padding: 100px 40px;
+  }
+
+  .heading {
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .founderSection {
+    padding: 120px 60px;
+  }
+}

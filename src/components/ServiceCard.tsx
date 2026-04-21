@@ -1,8 +1,9 @@
+import Icon, { type IconName } from "./Icon";
 import Link from "next/link";
 import styles from "./ServiceCard.module.css";
 
 interface ServiceCardProps {
-  icon: string;
+  icon: IconName;
   name: string;
   price: string;
   desc: string;
@@ -23,7 +24,9 @@ export default function ServiceCard({
       href={href}
       className={`${styles.card} ${highlight ? styles.highlight : ""}`}
     >
-      <div className={styles.iconWrap}>{icon}</div>
+      <div className={styles.iconWrap}>
+        <Icon name={icon} size={32} className={styles.iconSvg} />
+      </div>
       <div className={styles.info}>
         <div className={styles.name}>{name}</div>
         <div className={styles.price}>{price}</div>

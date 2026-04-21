@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Church Cleaning Sydney | Religious Facility Cleaning | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function ChurchCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Church Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -28,18 +33,12 @@ export default function ChurchCleaningPage() {
           "Bins emptied and relined",
           "Glass doors, windows and partitions cleaned",
         ]}
-        pricing={[
-          {
-            name: "Church & Religious Facility",
-            price: "Quote required",
-            desc: "Based on size, frequency and scope",
-          },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "✅", text: "Police-Checked Team" },
-          { icon: "⏰", text: "Flexible Scheduling" },
-          { icon: "🛡", text: "Fully Insured" },
-          { icon: "🌿", text: "Eco-Friendly Products" },
+          { icon: "checkCircle" as IconName, text: "Police-Checked Team" },
+          { icon: "clock" as IconName, text: "Flexible Scheduling" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
+          { icon: "leaf" as IconName, text: "Eco-Friendly Products" },
         ]}
         whyChoose={{
           title: "Why Churches Choose Made in Wolls",

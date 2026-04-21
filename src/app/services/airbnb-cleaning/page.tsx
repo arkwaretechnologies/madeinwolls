@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Airbnb Cleaning Sydney | Fast Turnaround | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function AirbnbCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Airbnb Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -26,16 +31,12 @@ export default function AirbnbCleaningPage() {
           "Before and after photos provided as standard",
           "Flexible scheduling around your booking calendar",
         ]}
-        pricing={[
-          { name: "Studio / 1 Bedroom", price: "From $140" },
-          { name: "2 to 3 Bedrooms", price: "From $210" },
-          { name: "4+ Bedrooms", price: "Quote required" },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "⏰", text: "Fast Turnaround" },
-          { icon: "📸", text: "Before & After Photos" },
-          { icon: "✅", text: "Police-Checked" },
-          { icon: "🛡", text: "Fully Insured" },
+          { icon: "clock" as IconName, text: "Fast Turnaround" },
+          { icon: "camera" as IconName, text: "Before & After Photos" },
+          { icon: "checkCircle" as IconName, text: "Police-Checked" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
         ]}
         whyChoose={{
           title: "Why Airbnb Hosts Choose Us",

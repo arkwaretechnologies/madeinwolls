@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Childcare Cleaning Sydney | Early Learning Centre Cleaning | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function ChildcareCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Childcare Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -29,18 +34,12 @@ export default function ChildcareCleaningPage() {
           "Bins emptied and relined with hygienic disposal",
           "Detailed job checklist completed and signed off on every visit",
         ]}
-        pricing={[
-          {
-            name: "Childcare & Early Learning",
-            price: "Quote required",
-            desc: "Based on facility size, number of rooms and frequency",
-          },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "👶", text: "Child-Safe Products" },
-          { icon: "✅", text: "Police & WWC Checked" },
-          { icon: "📋", text: "Compliance Standard" },
-          { icon: "🛡", text: "Fully Insured" },
+          { icon: "baby" as IconName, text: "Child-Safe Products" },
+          { icon: "checkCircle" as IconName, text: "Police & WWC Checked" },
+          { icon: "clipboard" as IconName, text: "Compliance Standard" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
         ]}
         whyChoose={{
           title: "Why Childcare Centres Choose Made in Wolls",

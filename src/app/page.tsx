@@ -11,11 +11,12 @@ import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
 import AboutIntroVideo from "@/components/AboutIntroVideo";
+import { type IconName } from "@/components/Icon";
 import styles from "./home.module.css";
 
-const services = [
+const services: { icon: IconName; name: string; price: string; desc: string; href: string; highlight?: boolean }[] = [
   {
-    icon: "🔑",
+    icon: "key",
     name: "End of Lease & Bond Cleaning",
     price: "From $320 — Inspection ready",
     desc: "Checklist, sign-off & photos included",
@@ -23,49 +24,49 @@ const services = [
     highlight: true,
   },
   {
-    icon: "🏠",
+    icon: "home",
     name: "Regular Home Cleaning",
     price: "From $140",
     desc: "Weekly, fortnightly or monthly",
     href: "/services/regular-cleaning",
   },
   {
-    icon: "🌸",
+    icon: "sparkles",
     name: "Spring & Deep Clean",
     price: "From $280",
     desc: "Top to bottom, every corner",
     href: "/services/spring-cleaning",
   },
   {
-    icon: "🏡",
+    icon: "house",
     name: "Airbnb Cleaning",
     price: "From $140",
     desc: "Fast turnaround, guest-ready",
     href: "/services/airbnb-cleaning",
   },
   {
-    icon: "🏢",
+    icon: "building",
     name: "Office & Commercial",
     price: "From $150",
     desc: "After-hours available",
     href: "/services/office-cleaning",
   },
   {
-    icon: "⛪",
+    icon: "church",
     name: "Church Cleaning",
     price: "Quote required",
     desc: "Respectful, reliable, flexible",
     href: "/services/church-cleaning",
   },
   {
-    icon: "👶",
+    icon: "baby",
     name: "Childcare Cleaning",
     price: "Quote required",
     desc: "Child-safe, compliant products",
     href: "/services/childcare-cleaning",
   },
   {
-    icon: "🧹",
+    icon: "broom",
     name: "Carpet Cleaning",
     price: "Quote required",
     desc: "Steam & dry cleaning available",
@@ -121,7 +122,7 @@ export default function HomePage() {
                 </h2>
               </FadeIn>
               <FadeIn variant="fade" delay={0.15}>
-                <div className={styles.goldRule} />
+                <div className={styles.secondaryRule} />
               </FadeIn>
               <FadeIn variant="up" delay={0.2}>
                 <p className={styles.bodyText}>
@@ -150,6 +151,7 @@ export default function HomePage() {
           </div>
         </div>
       </section>
+      
 
       <ValuesSection />
 

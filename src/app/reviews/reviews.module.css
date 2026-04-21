@@ -52,7 +52,7 @@
 }
 
 .ratingStars {
-  color: var(--gold);
+  color: var(--secondary);
   font-size: 18px;
 }
 

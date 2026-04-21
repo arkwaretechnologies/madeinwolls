@@ -39,7 +39,7 @@
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--secondary);
   margin-bottom: 8px;
 }
 
@@ -52,10 +52,10 @@
   margin-bottom: 12px;
 }
 
-.goldRule {
+.secondaryRule {
   width: 40px;
   height: 2px;
-  background: var(--gold);
+  background: var(--secondary);
   margin: 16px 0;
   transform-origin: left;
 }

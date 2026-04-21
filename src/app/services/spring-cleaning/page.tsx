@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Spring Cleaning Sydney | Deep Clean | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function SpringCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Spring & Deep Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -28,16 +33,12 @@ export default function SpringCleaningPage() {
           "Tile grout scrubbed in bathrooms",
           "Spot clean all walls, doors and door frames",
         ]}
-        pricing={[
-          { name: "Essential", price: "From $280", desc: "1 to 2 bedrooms" },
-          { name: "Standard", price: "From $390", desc: "3 bedrooms" },
-          { name: "Premium", price: "From $520", desc: "4 or more bedrooms" },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "✅", text: "Police-Checked" },
-          { icon: "🛡", text: "Fully Insured" },
-          { icon: "🌿", text: "Eco-Friendly Products" },
-          { icon: "📋", text: "Job Checklist Included" },
+          { icon: "checkCircle" as IconName, text: "Police-Checked" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
+          { icon: "leaf" as IconName, text: "Eco-Friendly Products" },
+          { icon: "clipboard" as IconName, text: "Job Checklist Included" },
         ]}
         suburbs={[
           "All suburbs across the Lower North Shore",

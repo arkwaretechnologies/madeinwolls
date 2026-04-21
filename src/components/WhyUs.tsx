@@ -1,34 +1,35 @@
+import Icon from "./Icon";
 import FadeIn from "./FadeIn";
 import styles from "./WhyUs.module.css";
 
 const reasons = [
   {
-    icon: "✅",
+    icon: "checkCircle" as const,
     title: "Police-Checked",
     text: "Every team member verified before their first job",
   },
   {
-    icon: "🛡",
+    icon: "shield" as const,
     title: "Fully Insured",
     text: "Complete peace of mind for every clean",
   },
   {
-    icon: "📋",
+    icon: "clipboard" as const,
     title: "Detailed Checklist",
     text: "Signed off on every single visit",
   },
   {
-    icon: "🌿",
+    icon: "leaf" as const,
     title: "Eco-Friendly",
     text: "Safe for your family, pets and home",
   },
   {
-    icon: "⭐",
+    icon: "star" as const,
     title: "44 Reviews",
     text: "4.8 stars on Google from real clients",
   },
   {
-    icon: "💯",
+    icon: "award" as const,
     title: "Guaranteed",
     text: "100% satisfaction or we return free",
   },
@@ -46,7 +47,9 @@ export default function WhyUs() {
           {reasons.map((r, i) => (
             <FadeIn key={r.title} variant="up" staggerIndex={i} staggerDelay={0.07}>
               <div className={styles.card}>
-                <span className={styles.cardIcon}>{r.icon}</span>
+                <span className={styles.cardIcon}>
+                  <Icon name={r.icon} size={32} />
+                </span>
                 <div className={styles.cardTitle}>{r.title}</div>
                 <div className={styles.cardText}>{r.text}</div>
               </div>

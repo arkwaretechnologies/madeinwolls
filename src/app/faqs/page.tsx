@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import Navbar from "@/components/Navbar";
-import FAQAccordion from "@/components/FAQAccordion";
+import ModernFAQ from "@/components/ModernFAQ";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
 import styles from "./faqs.module.css";
@@ -41,7 +41,12 @@ const faqs = [
   {
     question: "What areas do you service in Sydney?",
     answer:
-      "We service the Lower North Shore (Wollstonecraft, Crows Nest, Neutral Bay, Mosman, Cammeray, Kirribilli), Northern Beaches (Manly, Dee Why, Brookvale, Narrabeen, Mona Vale, Newport), City of Sydney and Inner City suburbs. Contact us if your suburb is not listed — we may still be able to help.",
+      "We service the Lower North Shore (Wollstonecraft, Crows Nest, Neutral Bay, Mosman, Cammeray, Kirribilli), Northern Beaches (Bondi, Double Bay, Paddington, Woollahra, Coogee, Randwick), City of Sydney and Inner City suburbs. Contact us if your suburb is not listed — we may still be able to help.",
+  },
+  {
+    question: "How can I find professional cleaners near me in Sydney?",
+    answer:
+      "Made in Wolls provides professional cleaning services near you across the North Shore and Northern Beaches. Our team is locally based, ensuring we can provide reliable, high-quality house cleaners Sydney residents trust for their homes and offices.",
   },
   {
     question: "Do you provide your own cleaning products and equipment?",
@@ -52,16 +57,6 @@ const faqs = [
     question: "What is your satisfaction guarantee?",
     answer:
       "If something is not right, contact us within 24 hours and we will return to make it right — at no extra cost. We are committed to delivering exceptional results on every clean.",
-  },
-  {
-    question: "How do I book a clean?",
-    answer:
-      "You can book online through our website, call us directly on 0410 721 027, or email info@madeinwolls.com. We respond to all enquiries within 2 hours during business hours.",
-  },
-  {
-    question: "Do you offer regular cleaning schedules?",
-    answer:
-      "Yes. We offer weekly, fortnightly and monthly regular cleaning services tailored to your home and schedule. Your regular cleaner will get to know your home and preferences over time.",
   },
 ];
 
@@ -76,15 +71,17 @@ export default function FAQsPage() {
           </div>
           <h1 className={styles.heroTitle}>Frequently Asked Questions</h1>
           <p className={styles.heroSub}>
-            Everything you need to know about Made in Wolls cleaning services.
-            Can&apos;t find your answer? Call us on 0410 721 027.
+            Looking for the <strong>best house cleaning service in Sydney</strong>? 
+            Find answers to common questions about <strong>house cleaning cost Sydney</strong>, 
+            <strong>bond cleaning North Shore</strong>, and how we deliver the premium results 
+            <strong>house cleaners Sydney</strong> families trust.
           </p>
         </div>
       </section>
 
       <section className={styles.content}>
         <div className={styles.contentInner}>
-          <FAQAccordion items={faqs} />
+          <ModernFAQ items={faqs} />
         </div>
       </section>
 

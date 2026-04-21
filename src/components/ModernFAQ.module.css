@@ -1,0 +1,121 @@
+.faqWrapper {
+  width: 100%;
+}
+
+.faqGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.faqCard {
+  background: white;
+  border-radius: 24px;
+  border: 1px solid var(--stone);
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: hidden;
+  height: fit-content;
+}
+
+.activeCard {
+  border-color: var(--secondary);
+  box-shadow: 0 15px 35px rgba(15, 45, 25, 0.08);
+  transform: translateY(-4px);
+}
+
+.questionButton {
+  width: 100%;
+  padding: 24px 32px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: block;
+}
+
+.questionHeader {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.iconWrapper {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--secondary-light);
+  color: var(--secondary);
+  flex-shrink: 0;
+  margin-top: 2px;
+  transition: all 0.3s ease;
+}
+
+.activeCard .iconWrapper {
+  background: var(--secondary);
+  color: white;
+  transform: rotate(180deg);
+}
+
+.questionText {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.4;
+  margin: 0;
+}
+
+.answerWrapper {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.16, 1, 0.3, 1), padding 0.4s ease;
+  padding: 0 32px;
+}
+
+.answerVisible {
+  grid-template-rows: 1fr;
+  padding: 0 32px 32px;
+}
+
+.answerContent {
+  overflow: hidden;
+}
+
+.answerText {
+  margin: 0;
+  padding-top: 12px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--grey);
+  border-top: 1px solid var(--stone-light);
+  padding-top: 20px;
+}
+
+@media (min-width: 992px) {
+  .faqGrid {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: start;
+  }
+}
+
+@media (max-width: 640px) {
+  .questionButton {
+    padding: 20px;
+  }
+  
+  .answerWrapper {
+    padding: 0 20px;
+  }
+  
+  .answerVisible {
+    padding: 0 20px 24px;
+  }
+  
+  .questionText {
+    font-size: 16px;
+  }
+}

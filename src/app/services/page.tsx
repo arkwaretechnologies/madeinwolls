@@ -5,6 +5,7 @@ import ServiceCard from "@/components/ServiceCard";
 import QuoteStrip from "@/components/QuoteStrip";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
 import styles from "./services.module.css";
 
 export const metadata: Metadata = {
@@ -13,23 +14,23 @@ export const metadata: Metadata = {
     "Premium cleaning services across Sydney. Regular, spring, end of lease, office, Airbnb, church and childcare cleaning. Police-checked, fully insured team.",
 };
 
-const services = [
+const services: { icon: IconName; name: string; price: string; desc: string; href: string; highlight?: boolean }[] = [
   {
-    icon: "🏠",
+    icon: "home",
     name: "Regular Home Cleaning",
     price: "From $140",
     desc: "Weekly, fortnightly or monthly — tailored to your schedule",
     href: "/services/regular-cleaning",
   },
   {
-    icon: "🌸",
+    icon: "sparkles",
     name: "Spring & Deep Cleaning",
     price: "From $280",
     desc: "Top to bottom, every surface, every corner",
     href: "/services/spring-cleaning",
   },
   {
-    icon: "🔑",
+    icon: "key",
     name: "End of Lease & Bond Cleaning",
     price: "From $320",
     desc: "Inspection-ready with checklist, sign-off and photos",
@@ -37,35 +38,35 @@ const services = [
     highlight: true,
   },
   {
-    icon: "🏢",
+    icon: "building",
     name: "Office & Commercial Cleaning",
     price: "From $150",
     desc: "After-hours available, zero disruption to your business",
     href: "/services/office-cleaning",
   },
   {
-    icon: "⛪",
+    icon: "church",
     name: "Church & Religious Facility Cleaning",
     price: "Quote required",
     desc: "Respectful, reliable and flexible around service times",
     href: "/services/church-cleaning",
   },
   {
-    icon: "👶",
+    icon: "baby",
     name: "Childcare & Early Learning Cleaning",
     price: "Quote required",
     desc: "Child-safe, non-toxic, compliance-standard products",
     href: "/services/childcare-cleaning",
   },
   {
-    icon: "🏡",
+    icon: "house",
     name: "Airbnb Cleaning",
     price: "From $140",
     desc: "Fast turnaround, guest-ready between every booking",
     href: "/services/airbnb-cleaning",
   },
   {
-    icon: "🧹",
+    icon: "broom",
     name: "Carpet Cleaning",
     price: "Quote required",
     desc: "Steam and dry cleaning available as standalone or add-on",

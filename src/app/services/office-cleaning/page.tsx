@@ -3,6 +3,9 @@ import Navbar from "@/components/Navbar";
 import ServicePageLayout from "@/components/ServicePageLayout";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import { type IconName } from "@/components/Icon";
+
+import { PRICING_DATA } from "@/constants/pricing";
 
 export const metadata: Metadata = {
   title: "Office Cleaning Sydney | Commercial Cleaning | Made in Wolls",
@@ -11,6 +14,8 @@ export const metadata: Metadata = {
 };
 
 export default function OfficeCleaningPage() {
+  const serviceData = PRICING_DATA.find(p => p.service === "Office & Commercial Cleaning");
+  
   return (
     <>
       <Navbar />
@@ -26,16 +31,12 @@ export default function OfficeCleaningPage() {
           "Bins emptied and relined throughout",
           "Internal glass and partitions cleaned",
         ]}
-        pricing={[
-          { name: "Small Office", price: "From $150", desc: "Up to 10 desks" },
-          { name: "Medium Office", price: "From $250", desc: "11 to 25 desks" },
-          { name: "Large Office", price: "Quote on request", desc: "25 or more desks" },
-        ]}
+        pricing={serviceData?.tiers || []}
         trustBadges={[
-          { icon: "✅", text: "Police-Checked" },
-          { icon: "🛡", text: "Fully Insured" },
-          { icon: "⏰", text: "After-Hours Available" },
-          { icon: "📋", text: "Job Checklist Included" },
+          { icon: "checkCircle" as IconName, text: "Police-Checked" },
+          { icon: "shield" as IconName, text: "Fully Insured" },
+          { icon: "clock" as IconName, text: "After-Hours Available" },
+          { icon: "clipboard" as IconName, text: "Job Checklist Included" },
         ]}
         suburbs={[
           "City of Sydney CBD", "North Sydney", "Crows Nest", "St Leonards",
