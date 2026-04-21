@@ -22,6 +22,14 @@ export default function AirbnbCleaningPage() {
       <ServicePageLayout
         title="Airbnb Cleaning Sydney — Guest-Ready Turnaround, Every Time"
         intro="As an Airbnb host, your reviews depend on first impressions. Made in Wolls provides fast, professional Airbnb turnaround cleaning services across Sydney's Lower North Shore and Northern Beaches — ensuring your property is immaculate and guest-ready between every booking. We understand that timing is everything for short-term rental hosts. Our team works efficiently within your checkout and check-in window, leaving your property spotless, fresh and staged for the next guest."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-99.JPG",
+          alt: "Airbnb turnaround cleaning service",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/IMG_0178.jpeg", alt: "Guest-ready presentation" },
+          { src: "/MIW-imagesoutput/590D8BCB-88C7-4DDE-8D7F-3D5DC1F7C7AD.jpeg", alt: "Fresh linens and tidy finish" },
+        ]}
         inclusions={[
           "Full property clean to hotel standard",
           "Linen change and bed making — if linen is provided by host",

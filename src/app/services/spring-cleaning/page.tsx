@@ -22,6 +22,15 @@ export default function SpringCleaningPage() {
       <ServicePageLayout
         title="Spring & Deep Cleaning Sydney — Top to Bottom, Spotless Every Time"
         intro="Sometimes a regular clean is not enough. Made in Wolls spring and deep cleaning service is a comprehensive, top-to-bottom clean designed for homes that need a thorough reset — whether after a long winter, before a special occasion, or simply when life gets busy. Our deep clean covers every surface, every corner and every appliance — the areas that standard cleaning often misses. All equipment and eco-friendly products included."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-57.JPG",
+          alt: "Spring and deep cleaning service in Sydney",
+          position: "center 18%",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/IMG_0160.jpeg", alt: "Deep cleaning detail" },
+          { src: "/MIW-imagesoutput/IMG_0181.jpeg", alt: "Home refresh result" },
+        ]}
         inclusions={[
           "Everything included in a regular clean — plus:",
           "Inside oven — racks, walls, door glass and seals",

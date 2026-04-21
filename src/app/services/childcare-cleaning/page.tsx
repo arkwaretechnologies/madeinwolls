@@ -22,6 +22,14 @@ export default function ChildcareCleaningPage() {
       <ServicePageLayout
         title="Childcare & Early Learning Centre Cleaning Sydney — Safe, Hygienic & Compliant"
         intro="The cleanliness of a childcare or early learning centre is not just about appearances — it directly impacts the health and safety of the children and staff in your care. Made in Wolls provides professional, thorough and hygienic cleaning services for childcare centres, early learning facilities and kindergartens across Sydney's Lower North Shore and Northern Beaches. Our team uses child-safe, non-toxic, hospital-grade disinfectants to ensure every surface is not just clean but genuinely safe. We understand Australian childcare compliance standards and clean to a level that supports your regulatory obligations."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-97.JPG",
+          alt: "Childcare and early learning centre cleaning service",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/79FB0273-C9D9-4EB9-BCF4-D8B8567DC812.jpeg", alt: "Hygienic, safe surfaces" },
+          { src: "/MIW-imagesoutput/8125AF72-BE0C-4A88-99E2-E764022D0B44.jpeg", alt: "Child-safe cleaning standard" },
+        ]}
         inclusions={[
           "All classrooms and learning areas — sanitise surfaces, tables, chairs and equipment",
           "Play areas and toys — disinfected with child-safe, non-toxic products",

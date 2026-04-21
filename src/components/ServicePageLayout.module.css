@@ -5,11 +5,24 @@
 .heroSection {
   background: var(--green);
   padding: 48px 20px 56px;
+  position: relative;
+  overflow: hidden;
 }
 
 .heroInner {
   max-width: 900px;
   margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.heroHasImage {
+  background-image:
+    linear-gradient(110deg, rgba(17, 46, 26, 0.92), rgba(17, 46, 26, 0.58)),
+    var(--hero-bg);
+  background-size: cover;
+  background-position: var(--hero-pos, center);
+  background-repeat: no-repeat;
 }
 
 .breadcrumb {
@@ -80,6 +93,38 @@
 .contentInner {
   max-width: 900px;
   margin: 0 auto;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 28px;
+}
+
+.contentMain {
+  min-width: 0;
+}
+
+.contentSide {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.sideImageCard {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--stone);
+  background: var(--warm-white);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.sideImage {
+  object-fit: cover;
+  object-position: center;
 }
 
 .sectionLabel {
@@ -305,6 +350,17 @@
 
   .content {
     padding: 80px 60px;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr 320px;
+    gap: 44px;
+    align-items: start;
+  }
+
+  .contentSide {
+    position: sticky;
+    top: 110px;
   }
 
   .sectionHeading {

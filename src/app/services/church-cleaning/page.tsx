@@ -22,6 +22,14 @@ export default function ChurchCleaningPage() {
       <ServicePageLayout
         title="Church & Religious Facility Cleaning Sydney — Respectful, Thorough & Reliable"
         intro="A place of worship deserves the highest standard of care. Made in Wolls provides professional, respectful cleaning services for churches, chapels and religious facilities across Sydney's Lower North Shore and Northern Beaches — ensuring your community's space is immaculate, welcoming and safe for every gathering. We understand that cleaning a place of worship requires sensitivity, reliability and attention to detail. Our police-checked, professionally trained team works around your service schedule — before or after congregation times — with zero disruption to your community."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-91.JPG",
+          alt: "Church and religious facility cleaning service",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/8EC9CAAD-4DAE-4DE3-83B1-9A426A3BB771.jpeg", alt: "Respectful, detailed cleaning" },
+          { src: "/MIW-imagesoutput/8E2C9205-8933-427A-8EA1-E07BF17D07A4.jpeg", alt: "Clean and welcoming space" },
+        ]}
         inclusions={[
           "Sanctuary and worship area — dusting, vacuuming, mopping and surface wipe-down",
           "Pews, chairs and seating areas cleaned and sanitised",

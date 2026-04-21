@@ -22,6 +22,14 @@ export default function OfficeCleaningPage() {
       <ServicePageLayout
         title="Office & Commercial Cleaning Sydney — Professional, Reliable & Disruption-Free"
         intro="A clean workspace is not just about appearances — it reflects your professionalism and creates an environment where your team can perform at their best. Made in Wolls provides reliable office and commercial cleaning services across Sydney, tailored to your schedule and requirements. We work around your business hours — early morning, after hours or weekends — to ensure zero disruption to your operations."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-68.JPG",
+          alt: "Office and commercial cleaning service",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/0E363401-1210-4699-8A17-8F35B14BFFAC.jpeg", alt: "Professional cleaning standard" },
+          { src: "/MIW-imagesoutput/2DF8004A-14DF-4B19-9A85-7236D138D0AF.jpeg", alt: "Spotless workspace finish" },
+        ]}
         inclusions={[
           "Reception, common areas and meeting rooms",
           "Workstation dusting — without disturbing papers or personal items",

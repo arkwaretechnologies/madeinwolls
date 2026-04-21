@@ -29,7 +29,7 @@ const CEOSection = () => {
                 <div className={styles.label}>Message from CEO</div>
                 <h2 className={styles.title}>A Commitment to Excellence</h2>
                 <div className={styles.quote}>
-                  "At Made in Wolls, we believe that actions speak louder than words."
+                  &ldquo;At Made in Wolls, we believe that actions speak louder than words.&rdquo;
                 </div>
                 <div className={styles.messageBody}>
                   <p>Dear Valued Clients,</p>

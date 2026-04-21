@@ -22,6 +22,15 @@ export default function RegularCleaningPage() {
       <ServicePageLayout
         title="Regular Home Cleaning Sydney — Reliable, Thorough & Trusted"
         intro="A clean home should never be something you have to worry about. Made in Wolls provides professional regular cleaning services across Sydney's Lower North Shore, Northern Beaches and City of Sydney — delivering a consistently exceptional standard on every visit. Our regular cleaning service is tailored to your home and schedule. Whether you need a weekly, fortnightly or monthly clean, we work around you — bringing all equipment and eco-friendly products every time."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-3.JPG",
+          alt: "Regular home cleaning in Sydney",
+          position: "center 22%",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/IMG_0158.jpeg", alt: "Cleaning detail work" },
+          { src: "/MIW-imagesoutput/IMG_0159.jpeg", alt: "Fresh, tidy home finish" },
+        ]}
         inclusions={[
           "Full kitchen clean — benchtops, stovetop, appliances, sink and floor",
           "All bathrooms — toilet, shower, bath, sink, mirrors and tiles",

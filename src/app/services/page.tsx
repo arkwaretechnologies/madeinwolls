@@ -78,7 +78,17 @@ export default function ServicesPage() {
   return (
     <>
       <Navbar />
-      <section className={styles.heroSection}>
+      <section
+        className={`${styles.heroSection} ${styles.heroHasImage}`}
+        style={
+          {
+            ["--hero-bg" as never]:
+              "url(/MIW-imagesoutput/IMG_0158.jpeg)",
+            ["--hero-pos" as never]: "center 30%",
+          } as React.CSSProperties
+        }
+        aria-label="Services"
+      >
         <div className={styles.heroInner}>
           <div className={styles.breadcrumb}>
             <Link href="/">Home</Link> / <span>Services</span>

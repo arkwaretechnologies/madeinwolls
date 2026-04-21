@@ -9,7 +9,19 @@ import styles from "./Navbar.module.css";
 
 const navLinks = [
   { href: "/", label: "Home" },
-  { href: "/services", label: "Services" },
+  {
+    label: "Services",
+    subLinks: [
+      { href: "/services", label: "All Services" },
+      { href: "/services/regular-cleaning", label: "Regular Home Cleaning" },
+      { href: "/services/spring-cleaning", label: "Spring & Deep Cleaning" },
+      { href: "/services/end-of-lease-cleaning", label: "End of Lease & Bond Cleaning" },
+      { href: "/services/office-cleaning", label: "Office & Commercial Cleaning" },
+      { href: "/services/church-cleaning", label: "Church Cleaning" },
+      { href: "/services/childcare-cleaning", label: "Childcare & Early Learning Cleaning" },
+      { href: "/services/airbnb-cleaning", label: "Airbnb Cleaning" },
+    ],
+  },
   { href: "/pricing", label: "Pricing" },
   { 
     label: "About", 
@@ -26,7 +38,7 @@ const navLinks = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
-  const [mobileAboutOpen, setMobileAboutOpen] = useState(false);
+  const [mobileOpenLabel, setMobileOpenLabel] = useState<string | null>(null);
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 20);
@@ -125,11 +137,17 @@ export default function Navbar() {
                 <>
                   <button 
                     className={styles.mobileSubToggle}
-                    onClick={() => setMobileAboutOpen(!mobileAboutOpen)}
+                    onClick={() =>
+                      setMobileOpenLabel((curr) => (curr === link.label ? null : link.label))
+                    }
                   >
-                    {link.label} <span>{mobileAboutOpen ? "−" : "+"}</span>
+                    {link.label} <span>{mobileOpenLabel === link.label ? "−" : "+"}</span>
                   </button>
-                  <div className={`${styles.mobileSubLinks} ${mobileAboutOpen ? styles.mobileSubLinksOpen : ""}`}>
+                  <div
+                    className={`${styles.mobileSubLinks} ${
+                      mobileOpenLabel === link.label ? styles.mobileSubLinksOpen : ""
+                    }`}
+                  >
                     {link.subLinks.map((sub) => (
                       <Link
                         key={sub.href}

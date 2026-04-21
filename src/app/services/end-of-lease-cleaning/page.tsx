@@ -22,6 +22,14 @@ export default function EndOfLeaseCleaningPage() {
       <ServicePageLayout
         title="End of Lease Cleaning Sydney — Bond Clean Standard, Inspection Ready"
         intro="Moving out is stressful enough without worrying about your bond. Made in Wolls specialises in end of lease and bond cleaning across Sydney — cleaning to full rental inspection standard so you can hand back the keys with complete confidence. We work directly with tenants, landlords and property managers across the Lower North Shore, Northern Beaches and City of Sydney. Every bond clean includes a detailed job checklist, before and after photos on request, and a signed sign-off document."
+        heroImage={{
+          src: "/MadeinWolls-images/MADEINWOLLS-46.JPG",
+          alt: "End of lease and bond cleaning service",
+        }}
+        sideImages={[
+          { src: "/MIW-imagesoutput/IMG_1531.jpeg", alt: "Inspection-ready finish" },
+          { src: "/MIW-imagesoutput/IMG_1665.jpeg", alt: "Clean, bright interiors" },
+        ]}
         inclusions={[
           "Full kitchen deep clean — inside oven, inside fridge, inside all cupboards and drawers",
           "Bathrooms — tiles, grout, shower screens, toilet, vanity, exhaust fans",
