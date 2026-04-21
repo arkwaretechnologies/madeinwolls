@@ -4,6 +4,7 @@ import Image from "next/image";
 import Navbar from "@/components/Navbar";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import FounderExperimental from "@/components/FounderExperimental";
 import styles from "./team.module.css";
 
 export const metadata: Metadata = {
@@ -142,6 +143,9 @@ export default function OurTeamPage() {
           </div>
         </div>
       </section>
+
+      {/* ── Experimental Founder Section (for comparison) ── */}
+      <FounderExperimental />
 
       <CTABlock />
       <Footer />

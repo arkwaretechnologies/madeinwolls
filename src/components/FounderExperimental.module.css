@@ -1,0 +1,299 @@
+/* ═══════════════════════════════════════════════════════
+   Experimental Founder Section – Premium Mobile Experience
+   ═══════════════════════════════════════════════════════ */
+
+.expSection {
+  position: relative;
+  padding: 60px 20px;
+  background: linear-gradient(180deg, #f7f5f0 0%, #ffffff 50%, #f7f5f0 100%);
+  overflow: hidden;
+}
+
+/* ── Decorative Background ─────────────────────────── */
+
+.bgDecorations {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.dotGrid {
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  background-image: radial-gradient(circle, var(--sage) 1.2px, transparent 1.2px);
+  background-size: 16px 16px;
+  opacity: 0.1;
+}
+
+.dotGrid1 { top: 100px; left: 5%; }
+.dotGrid2 { bottom: 100px; right: 5%; }
+
+/* ── Main Container ────────────────────────────────── */
+
+.expContainer {
+  position: relative;
+  z-index: 1;
+  max-width: 1140px;
+  margin: 0 auto;
+}
+
+/* ── Header ────────────────────────────────────────── */
+
+.expHeader {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.expChip {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--green);
+  background: var(--green-light);
+  padding: 8px 18px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.expTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.04em;
+  line-height: 1.2;
+}
+
+.expTitleAccent { color: var(--green); }
+
+.expSubtitle {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.6;
+  max-width: 480px;
+  margin: 12px auto 0;
+}
+
+/* ═══════════════════════════════════════════════════════
+   MOBILE FIRST – Spotlight Stacked Layout
+   ═══════════════════════════════════════════════════════ */
+
+.founderBlock {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.stageCard {
+  position: relative;
+  background: white;
+  border-radius: 32px;
+  padding: 40px 24px;
+  box-shadow: 0 4px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(224, 221, 213, 0.6);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.textContent {
+  width: 100%;
+  margin-bottom: 32px;
+  z-index: 2;
+}
+
+.founderLabel {
+  font-size: 10px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--sage);
+  margin-bottom: 8px;
+}
+
+.founderName {
+  font-size: 30px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  margin-bottom: 12px;
+}
+
+.founderBioDesktop {
+  display: none;
+}
+
+.founderBioMobile {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+  margin-bottom: 24px;
+}
+
+.signatureArea {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.signatureName { font-size: 13px; font-weight: 700; }
+.signatureRole { font-size: 11px; color: var(--green); font-weight: 600; }
+
+/* ── Mobile Figure Spotlight ─────────────────────── */
+
+.figureClipWrapper {
+  position: relative;
+  width: 100%;
+  max-width: 280px;
+  height: 280px; /* Square container for the circular spotlight */
+  margin-top: 20px;
+}
+
+.spotlightBg {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 240px;
+  height: 240px;
+  background: radial-gradient(circle, rgba(163, 173, 149, 0.15) 0%, rgba(163, 173, 149, 0.02) 70%);
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.founderFigure {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 240px;
+  z-index: 2;
+}
+
+.founderFigure img {
+  width: 100%;
+  height: auto;
+  filter: drop-shadow(0 12px 24px rgba(0, 0, 0, 0.1));
+}
+
+/* ── Mobile Quote Overlay ────────────────────────── */
+
+.quoteFloat {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 20px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 300px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(224, 221, 213, 0.5);
+  z-index: 10;
+  text-align: left;
+}
+
+.quoteOpenMark { font-size: 24px; color: var(--green); font-family: serif; line-height: 1; margin-bottom: 4px; }
+.quoteBody { font-size: 12px; font-style: italic; color: var(--grey); line-height: 1.6; }
+.quoteAttrib { font-size: 10px; font-weight: 700; margin-top: 8px; text-transform: uppercase; }
+
+/* ── Divider ─────────────────────────────────────── */
+
+.blockDivider { display: flex; align-items: center; justify-content: center; gap: 12px; margin: 40px 0; }
+.blockDividerLine { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--stone), transparent); }
+.blockDividerDot { width: 4px; height: 4px; border-radius: 50%; background: var(--sage); }
+
+/* ═══════════════════════════════════════════════════════
+   TABLET & DESKTOP – Returning to Breakout Side-by-Side
+   ═══════════════════════════════════════════════════════ */
+
+@media (min-width: 768px) {
+  .expSection { padding: 100px 40px; }
+  .expHeader { margin-bottom: 80px; }
+  .expTitle { font-size: 48px; }
+  .expSubtitle { font-size: 16px; margin-top: 20px; }
+
+  .founderBlock { margin-bottom: 120px; }
+
+  .stageCard {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+    padding: 60px;
+    border-radius: 40px;
+    min-height: 500px;
+  }
+
+  .textContent { width: 45%; margin-bottom: 0; }
+  .textRight .textContent { margin-left: auto; }
+
+  .founderName { font-size: 42px; margin-bottom: 20px; }
+  .founderBioDesktop {
+    display: block;
+    font-family: var(--font-inter), sans-serif;
+    font-size: 16px;
+    color: var(--grey);
+    line-height: 1.7;
+    margin-bottom: 24px;
+  }
+
+  .founderBioMobile {
+    display: none;
+  }
+
+  /* Breakout Figure logic */
+  .figureClipWrapper {
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    height: 180%; /* Allow head to break top */
+    width: 400px;
+    max-width: none;
+    margin: 0;
+    overflow: hidden;
+    right: 40px;
+  }
+
+  .textRight .figureClipWrapper { right: auto; left: 40px; }
+
+  .spotlightBg {
+    width: 450px;
+    height: 450px;
+    bottom: -100px;
+    top: auto;
+    left: 50%;
+  }
+
+  .founderFigure { width: 400px; bottom: 0; }
+  .founderFigure img { filter: drop-shadow(0 20px 40px rgba(0, 0, 0, 0.15)); }
+
+  .quoteFloat {
+    bottom: 60px;
+    right: -20px;
+    left: auto;
+    transform: none;
+    width: 320px;
+    padding: 28px;
+  }
+
+  .textRight .quoteFloat { right: auto; left: -20px; }
+  .quoteBody { font-size: 14px; }
+}
+
+@media (min-width: 1024px) {
+  .stageCard { padding: 72px; min-height: 560px; }
+  .textContent { width: 42%; }
+  .figureClipWrapper { width: 480px; right: 60px; }
+  .textRight .figureClipWrapper { left: 60px; }
+  .founderFigure { width: 480px; }
+  .quoteFloat { width: 340px; right: -40px; }
+  .textRight .quoteFloat { left: -40px; }
+}
