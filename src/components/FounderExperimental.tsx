@@ -18,7 +18,7 @@ interface FounderData {
 const founders: FounderData[] = [
   {
     name: "Maychelle Anlap",
-    role: "Founder & CEO",
+    role: "Founder & Director",
     bio: "Founded Made in Wolls with a singular mission to deliver premium cleaning services that empower families and transform homes into spaces of comfort and calm.",
     shortBio: "Founded Made in Wolls with a mission to deliver premium cleaning that transforms homes into spaces of comfort.",
     image: "/images/Founder Transparent.png",
@@ -100,7 +100,9 @@ export default function FounderExperimental() {
 
                   {/* THE BREAKOUT FIGURE — no box, no frame */}
                   <div className={styles.figureClipWrapper}>
-                    <div className={styles.spotlightBg} />
+                    <div className={styles.figureMainCircle} />
+                    <div className={styles.figureOuterRing} />
+                    <div className={styles.figureDots} aria-hidden="true" />
                     <div className={styles.founderFigure}>
                       <Image
                         src={founder.image}

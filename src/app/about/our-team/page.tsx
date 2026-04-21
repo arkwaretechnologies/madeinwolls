@@ -51,69 +51,11 @@ export default function OurTeamPage() {
         </section>
       </div>
 
+      {/* ── Founder Section ── */}
+      <FounderExperimental />
+
       <section className={styles.content}>
         <div className={styles.contentInner}>
-          <div className={styles.teamMember}>
-            <div className={styles.avatar}>
-              <Image 
-                src="/images/Founder.JPG" 
-                alt="Maychelle Anlap" 
-                width={400} 
-                height={500} 
-                className={styles.profileImg}
-              />
-            </div>
-            <div className={styles.memberInfo}>
-              <div className={styles.label}>Founder &amp; Director</div>
-              <h2 className={styles.memberName}>Maychelle Anlap</h2>
-              <p className={styles.bodyText}>
-                I founded Made in Wolls because I saw what a genuinely clean,
-                well-cared-for home does for a family. It reduces stress, creates
-                comfort and gives you time back.
-              </p>
-              <p className={styles.bodyText}>
-                I built this business around the values I would want if someone were
-                cleaning my own home — reliability, attention to detail and genuine
-                care. Every system, every checklist and every standard we hold our
-                team to comes from that principle.
-              </p>
-              <p className={styles.bodyText}>
-                Based in Wollstonecraft, I oversee the quality and direction of Made
-                in Wolls alongside my partner Bruno. I am proud of the team we have
-                built and the trust our clients place in us.
-              </p>
-              <p className={styles.signature}>— Maychelle Anlap, Founder</p>
-            </div>
-          </div>
-
-          <div className={styles.divider} />
-
-          <div className={styles.teamMember}>
-            <div className={styles.avatar}>
-              <Image 
-                src="/images/Co-Founder.JPG" 
-                alt="Bruno" 
-                width={400} 
-                height={500} 
-                className={styles.profileImg}
-              />
-            </div>
-            <div className={styles.memberInfo}>
-              <div className={styles.label}>Co-Owner &amp; Operations Manager</div>
-              <h2 className={styles.memberName}>Bruno</h2>
-              <p className={styles.bodyText}>
-                Bruno is the Co-owner and Operations Manager of Made in Wolls
-                Cleaning Services. He oversees the day-to-day coordination of jobs,
-                scheduling and team management — ensuring every booking runs smoothly
-                from confirmation through to completion. Bruno is the primary point
-                of contact for operational queries and works closely with Maychelle
-                to maintain the high standards Made in Wolls is known for.
-              </p>
-            </div>
-          </div>
-
-          <div className={styles.divider} />
-
           <div className={styles.teamSection}>
             <div className={styles.label}>Our Professionals</div>
             <h2 className={styles.heading}>The Cleaning Team</h2>
@@ -123,9 +65,9 @@ export default function OurTeamPage() {
               background check and training process before their first job with Made
               in Wolls.
             </p>
-            
+
             <div className={styles.cleanerGrid}>
-              {cleaners.map(cleaner => (
+              {cleaners.map((cleaner) => (
                 <div key={cleaner.name} className={styles.cleanerCard}>
                   <div className={styles.cleanerAvatar}>{cleaner.initial}</div>
                   <h3 className={styles.cleanerName}>{cleaner.name}</h3>
@@ -133,19 +75,9 @@ export default function OurTeamPage() {
                 </div>
               ))}
             </div>
-
-            <div className={styles.trustBadges}>
-              <span className={styles.badge}>✅ Police-Checked</span>
-              <span className={styles.badge}>🛡 Fully Insured</span>
-              <span className={styles.badge}>📋 Trained &amp; Supervised</span>
-              <span className={styles.badge}>🌿 Eco-Product Certified</span>
-            </div>
           </div>
         </div>
       </section>
-
-      {/* ── Experimental Founder Section (for comparison) ── */}
-      <FounderExperimental />
 
       <CTABlock />
       <Footer />

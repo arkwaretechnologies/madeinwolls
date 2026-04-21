@@ -156,16 +156,40 @@
   margin-top: 20px;
 }
 
-.spotlightBg {
+.figureMainCircle {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   width: 240px;
   height: 240px;
-  background: radial-gradient(circle, rgba(163, 173, 149, 0.15) 0%, rgba(163, 173, 149, 0.02) 70%);
+  background: linear-gradient(135deg, #f6f1ea 0%, #e8dfd3 100%);
   border-radius: 50%;
   z-index: 1;
+}
+
+.figureOuterRing {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 272px;
+  height: 272px;
+  border-radius: 50%;
+  border: 1px solid rgba(240, 236, 230, 0.9);
+  z-index: 0;
+}
+
+.figureDots {
+  position: absolute;
+  left: 14px;
+  top: 70px;
+  width: 84px;
+  height: 52px;
+  opacity: 0.45;
+  z-index: 2;
+  background-image: radial-gradient(circle, rgba(216, 207, 191, 0.95) 1.2px, transparent 1.3px);
+  background-size: 14px 14px;
 }
 
 .founderFigure {
@@ -174,7 +198,7 @@
   left: 50%;
   transform: translateX(-50%);
   width: 240px;
-  z-index: 2;
+  z-index: 3;
 }
 
 .founderFigure img {
@@ -264,12 +288,32 @@
 
   .textRight .figureClipWrapper { right: auto; left: 40px; }
 
-  .spotlightBg {
+  .figureMainCircle {
     width: 450px;
     height: 450px;
     bottom: -100px;
     top: auto;
     left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .figureOuterRing {
+    width: 510px;
+    height: 510px;
+    bottom: -130px;
+    top: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    border-color: rgba(240, 236, 230, 0.95);
+  }
+
+  .figureDots {
+    left: 22px;
+    top: 140px;
+    width: 120px;
+    height: 80px;
+    opacity: 0.35;
+    background-size: 16px 16px;
   }
 
   .founderFigure { width: 400px; bottom: 0; }
