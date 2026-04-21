@@ -27,7 +27,8 @@ const navLinks = [
     label: "About", 
     subLinks: [
       { href: "/about", label: "Our Story" },
-      { href: "/about/our-team", label: "Meet the Team" }
+      { href: "/about/our-team", label: "Meet the Team" },
+      { href: "/about/awards", label: "Awards" }
     ]
   },
   { href: "/reviews", label: "Reviews" },

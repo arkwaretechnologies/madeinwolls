@@ -1,0 +1,217 @@
+.banner {
+  position: relative;
+  background-color: var(--green);
+  background-image: url("/images/Untitled-design-33.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 45, 25, 0.42) 0%,
+    rgba(15, 45, 25, 0.22) 100%
+  );
+  pointer-events: none;
+}
+
+.heroSection {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+  padding: 48px 20px 56px;
+}
+
+.heroInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.breadcrumb {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-inter), sans-serif;
+  margin-bottom: 20px;
+}
+
+.breadcrumb a {
+  color: rgba(255, 255, 255, 0.5);
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.heroTitle {
+  font-size: 28px;
+  font-weight: 800;
+  color: white;
+  letter-spacing: -0.04em;
+  line-height: 1.15;
+  margin-bottom: 14px;
+}
+
+.heroSub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  color: rgba(255, 255, 255, 0.75);
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.content {
+  padding: 48px 20px;
+  background: var(--warm-white);
+}
+
+.contentInner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  margin-bottom: 8px;
+}
+
+.heading {
+  font-size: 26px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  line-height: 1.2;
+  margin-bottom: 16px;
+}
+
+.secondaryRule {
+  width: 40px;
+  height: 2px;
+  background: var(--secondary);
+  margin: 16px 0 24px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+}
+
+.card {
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 18px;
+  padding: 22px 18px;
+}
+
+.cardTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.cardTitleWrap {
+  min-width: 0;
+}
+
+.cardTitle {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  margin: 0;
+}
+
+.cardMeta {
+  margin-top: 6px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 12px;
+  color: var(--grey);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.dot {
+  opacity: 0.7;
+}
+
+.figure {
+  margin: 0;
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid var(--stone);
+  background: var(--warm-white);
+  line-height: 0;
+}
+
+.image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.bodyText {
+  margin-top: 14px;
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  color: var(--grey);
+  line-height: 1.7;
+}
+
+@media (min-width: 768px) {
+  .heroSection {
+    padding: 64px 40px 72px;
+  }
+
+  .heroTitle {
+    font-size: 38px;
+  }
+
+  .content {
+    padding: 64px 40px;
+  }
+
+  .heading {
+    font-size: 32px;
+  }
+
+  .card {
+    padding: 26px 22px;
+  }
+
+  .cardTitle {
+    font-size: 20px;
+  }
+
+  .bodyText {
+    font-size: 15px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .heroSection {
+    padding: 80px 60px 88px;
+  }
+
+  .heroTitle {
+    font-size: 44px;
+  }
+
+  .content {
+    padding: 80px 60px;
+  }
+}
+
