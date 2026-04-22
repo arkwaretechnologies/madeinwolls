@@ -128,7 +128,7 @@ export default function HomePage() {
                 <p className={styles.bodyText}>
                   Made in Wolls Cleaning Services is a premium residential and commercial
                   cleaning company based in Wollstonecraft, Sydney. Founded by Maychelle
-                  Anlap, we specialise in regular home cleaning, spring and deep cleans,
+                  we specialise in regular home cleaning, spring and deep cleans,
                   end of lease and bond cleans, office cleaning and Airbnb turnaround
                   cleans.
                 </p>

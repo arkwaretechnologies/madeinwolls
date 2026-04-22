@@ -27,7 +27,7 @@ export default function Hero() {
               <span className={styles.titleAccent}>We Clean, We Commit.</span>
             </h1>
             <p className={styles.subtitle}>
-              ⭐ 4.8/5 from 44 Google Reviews | Police-Checked Team | Fully Insured |
+              ⭐ 4.9/5 from 125 Google Reviews | Police-Checked Team | Fully Insured |
               100% Satisfaction Guarantee
             </p>
             <div className={styles.actions}>
@@ -44,11 +44,11 @@ export default function Hero() {
         <div className={styles.heroInner}>
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>44</div>
+              <div className={styles.statNumber}>125</div>
               <div className={styles.statLabel}>Google Reviews</div>
             </div>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>4.8★</div>
+              <div className={styles.statNumber}>4.9★</div>
               <div className={styles.statLabel}>Rating</div>
             </div>
             <div className={styles.stat}>

@@ -4,7 +4,7 @@ import FadeIn from "./FadeIn";
 
 const founders = [
   {
-    name: "Maychelle Anlap",
+    name: "Maychelle",
     role: "Founder & CEO",
     bio: "Maychelle founded Made in Wolls with a vision to redefine premium cleaning in Sydney. Her commitment to quality and client satisfaction has built the company's reputation for excellence. With a background in high-end hospitality, she ensures every home receives the 'premium' touch.",
     image: "/images/Founder.JPG",

@@ -25,8 +25,8 @@ const reasons = [
   },
   {
     icon: "star" as const,
-    title: "44 Reviews",
-    text: "4.8 stars on Google from real clients",
+    title: "125 Reviews",
+    text: "4.9 stars on Google from real clients",
   },
   {
     icon: "award" as const,

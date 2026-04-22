@@ -16,7 +16,7 @@ interface FounderData {
 
 const founders: FounderData[] = [
   {
-    name: "Maychelle Anlap",
+    name: "Maychelle",
     role: "Founder & Director",
     bio: "Founded Made in Wolls with a singular mission to deliver premium cleaning services that empower families and transform homes into spaces of comfort and calm.",
     shortBio: "Founded Made in Wolls with a mission to deliver premium cleaning that transforms homes into spaces of comfort.",

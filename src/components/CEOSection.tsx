@@ -14,7 +14,7 @@ const CEOSection = () => {
               <div className={styles.imageWrapper}>
                 <Image
                   src="/images/Founder.JPG"
-                  alt="Maychelle L. Anlap - CEO of Made in Wolls"
+                  alt="Maychelle - CEO of Made in Wolls"
                   width={600}
                   height={800}
                   className={styles.image}
@@ -47,7 +47,7 @@ const CEOSection = () => {
                   </p>
                 </div>
                 <div className={styles.signature}>
-                  <div className={styles.name}>Maychelle L. Anlap</div>
+                  <div className={styles.name}>Maychelle</div>
                   <div className={styles.role}>CEO, Made in Wolls</div>
                 </div>
               </div>
@@ -80,7 +80,7 @@ const CEOSection = () => {
                 <h2 className={styles.title}>How It All Started</h2>
                 <div className={styles.messageBody}>
                   <p>
-                    Made in Wolls was founded by Maychelle Anlap, a Sydney-based entrepreneur who saw a clear gap in the market — clients wanted a cleaning service that was genuinely reliable, genuinely professional and genuinely cared about the result.
+                    Made in Wolls was founded by Maychelle, a Sydney-based entrepreneur who saw a clear gap in the market — clients wanted a cleaning service that was genuinely reliable, genuinely professional and genuinely cared about the result.
                   </p>
                   <p>
                     What started as a vision has grown into a trusted team of experienced, police-checked cleaners servicing some of Sydney&apos;s most prestigious homes and offices. Every job we take on is approached with the same attention to detail and commitment to quality that built our reputation.

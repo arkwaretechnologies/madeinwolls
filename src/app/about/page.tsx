@@ -12,7 +12,7 @@ import styles from "./about.module.css";
 export const metadata: Metadata = {
   title: "About Made in Wolls — Premium Cleaning Services, Sydney",
   description:
-    "Learn about Made in Wolls Cleaning Services. Founded by Maychelle Anlap, we are a premium, locally owned cleaning company based in Wollstonecraft, Sydney.",
+    "Learn about Made in Wolls Cleaning Services. Founded by Maychelle, we are a premium, locally owned cleaning company based in Wollstonecraft, Sydney.",
 };
 
 export default function AboutPage() {
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h2 className={styles.heading}>How It All Started</h2>
           <div className={styles.secondaryRule} />
           <p className={styles.bodyText}>
-            Made in Wolls was founded by Maychelle Anlap, a Sydney-based
+            Made in Wolls was founded by Maychelle, a Sydney-based
             entrepreneur who saw a clear gap in the market — clients wanted a
             cleaning service that was genuinely reliable, genuinely professional
             and genuinely cared about the result.
@@ -138,7 +138,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}><Icon name="star" size={32} /></div>
-              <h3 className={styles.whyTitle}>Trusted by 44+ Sydney Clients</h3>
+              <h3 className={styles.whyTitle}>Trusted by 125+ Sydney Clients</h3>
               <p className={styles.whyText}>
                 Our clients recommend us because we deliver. Read our Google reviews
                 to see what they say.

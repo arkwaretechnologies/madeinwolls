@@ -44,7 +44,7 @@ export default function RegularCleaningPage() {
         trustBadges={[
           { icon: "checkCircle" as IconName, text: "Police-Checked" },
           { icon: "shield" as IconName, text: "Fully Insured" },
-          { icon: "star" as IconName, text: "44 Google Reviews" },
+          { icon: "star" as IconName, text: "125 Google Reviews" },
           { icon: "clipboard" as IconName, text: "Job Checklist Included" },
         ]}
         suburbs={[
