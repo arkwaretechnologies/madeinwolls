@@ -9,7 +9,7 @@ import styles from "./reviews.module.css";
 export const metadata: Metadata = {
   title: "Reviews | Made in Wolls Cleaning Services Sydney",
   description:
-    "Read what our clients say about Made in Wolls. 4.9/5 from 125 Google Reviews. Trusted by Sydney families.",
+    "Read what our clients say about Made in Wolls. Trusted by 100+ families. 4.9/5 rating.",
 };
 
 const allReviews = [
@@ -66,13 +66,13 @@ export default function ReviewsPage() {
           </div>
           <h1 className={styles.heroTitle}>What Our Clients Say</h1>
           <p className={styles.heroSub}>
-            With 125+ Google reviews and a 4.9/5 rating, our clients trust us to
-            deliver exceptional results every time. Here&apos;s what they have to say.
+            Trusted by 100+ families and rated 4.9/5, our clients trust us to deliver
+            exceptional results every time. Here&apos;s what they have to say.
           </p>
           <div className={styles.ratingBadge}>
             <span className={styles.ratingStars}>★★★★★</span>
             <span className={styles.ratingNumber}>4.9/5</span>
-            <span className={styles.ratingSource}>from 125 Google Reviews</span>
+            <span className={styles.ratingSource}>Trusted by 100+ families</span>
           </div>
         </div>
       </section>

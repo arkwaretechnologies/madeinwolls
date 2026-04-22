@@ -138,7 +138,7 @@ export default function AboutPage() {
             </div>
             <div className={styles.whyCard}>
               <div className={styles.whyIcon}><Icon name="star" size={32} /></div>
-              <h3 className={styles.whyTitle}>Trusted by 125+ Sydney Clients</h3>
+              <h3 className={styles.whyTitle}>Trusted by 100+ families</h3>
               <p className={styles.whyText}>
                 Our clients recommend us because we deliver. Read our Google reviews
                 to see what they say.
