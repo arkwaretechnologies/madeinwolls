@@ -25,8 +25,8 @@ const reasons = [
   },
   {
     icon: "star" as const,
-    title: "125 Reviews",
-    text: "4.9 stars on Google from real clients",
+    title: "Trusted by 100+ families",
+    text: "4.9/5 rating from real Sydney clients",
   },
   {
     icon: "award" as const,

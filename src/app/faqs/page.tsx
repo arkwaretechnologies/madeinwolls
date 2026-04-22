@@ -16,7 +16,7 @@ const faqs = [
   {
     question: "What is the best house cleaning service in Sydney?",
     answer:
-      "Made in Wolls Cleaning Services is a premium, police-checked and fully insured cleaning company based in Wollstonecraft, servicing the Lower North Shore, Northern Beaches and City of Sydney. Trusted by 100+ families and backed by a 100% satisfaction guarantee, we are trusted by families and professionals across Sydney.",
+      "Made in Wolls Cleaning Services is a premium, police-checked and fully insured cleaning company based in Wollstonecraft, servicing the Lower North Shore, Northern Beaches and City of Sydney. Trusted by 100+ families and backed by a 100% satisfaction guarantee, we are chosen by families and professionals across Sydney.",
   },
   {
     question: "How much does a house clean cost in Sydney?",

@@ -28,13 +28,13 @@ const dmSerif = DM_Serif_Display({
 export const metadata: Metadata = {
   title: "Made in Wolls — Premium House Cleaning Services Sydney",
   description:
-    "Premium house cleaning services in Sydney. Police-checked, fully insured team. Regular, spring, end of lease, office, Airbnb cleaning. 4.9/5 from 125 Google Reviews. We Clean, We Commit.",
+    "Premium house cleaning services in Sydney. Police-checked, fully insured team. Regular, spring, end of lease, office, Airbnb cleaning. Trusted by 100+ families. 4.9/5 rating. We Clean, We Commit.",
   keywords:
     "premium house cleaning Sydney, house cleaning services Sydney, professional cleaners Sydney, cleaning services North Shore, cleaning services Northern Beaches, home cleaning Wollstonecraft, police checked cleaners Sydney",
   openGraph: {
     title: "Made in Wolls — Premium House Cleaning Services Sydney",
     description:
-      "Police-checked, fully insured cleaning team servicing Sydney. 4.9/5 from 125 Google Reviews.",
+      "Police-checked, fully insured cleaning team servicing Sydney. Trusted by 100+ families. 4.9/5 rating.",
     url: "https://www.madeinwolls.com",
     siteName: "Made in Wolls",
     type: "website",

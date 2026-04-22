@@ -26,10 +26,6 @@ export default function Hero() {
               Premium House Cleaning Services Sydney —{" "}
               <span className={styles.titleAccent}>We Clean, We Commit.</span>
             </h1>
-            <p className={styles.subtitle}>
-              ⭐ 4.9/5 from 125 Google Reviews | Police-Checked Team | Fully Insured |
-              100% Satisfaction Guarantee
-            </p>
             <div className={styles.actions}>
               <BookOpenButton className={styles.btnGreen}>
                 Book a Clean →
@@ -44,8 +40,8 @@ export default function Hero() {
         <div className={styles.heroInner}>
           <div className={styles.stats}>
             <div className={styles.stat}>
-              <div className={styles.statNumber}>125</div>
-              <div className={styles.statLabel}>Google Reviews</div>
+              <div className={styles.statNumber}>100+</div>
+              <div className={styles.statLabel}>Trusted families</div>
             </div>
             <div className={styles.stat}>
               <div className={styles.statNumber}>4.9★</div>

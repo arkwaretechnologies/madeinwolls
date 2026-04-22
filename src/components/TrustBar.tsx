@@ -4,7 +4,7 @@ import styles from "./TrustBar.module.css";
 const badges = [
   { icon: "checkCircle" as const, text: "Police-Checked Staff" },
   { icon: "shield" as const, text: "Fully Insured" },
-  { icon: "star" as const, text: "125 Google Reviews" },
+  { icon: "star" as const, text: "Trusted by 100+ families" },
   { icon: "leaf" as const, text: "Eco-Friendly Products" },
   { icon: "clipboard" as const, text: "Detailed Job Checklists" },
 ];

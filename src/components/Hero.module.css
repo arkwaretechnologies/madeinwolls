@@ -71,7 +71,7 @@
   color: var(--white);
   line-height: 1.1;
   letter-spacing: -0.04em;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
   opacity: 0;
   animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.2s forwards;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -81,23 +81,12 @@
   color: var(--secondary-light);
 }
 
-.subtitle {
-  font-family: var(--font-inter), sans-serif;
-  font-size: 15px;
-  color: rgba(250, 248, 243, 0.88);
-  line-height: 1.7;
-  margin-bottom: 28px;
-  max-width: 540px;
-  opacity: 0;
-  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
-}
-
 .actions {
   display: flex;
   gap: 12px;
   flex-wrap: wrap;
   opacity: 0;
-  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.5s forwards;
+  animation: heroFadeUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) 0.35s forwards;
 }
 
 .btnGreen {
@@ -201,7 +190,7 @@
 
 @media (max-width: 767px) {
   .actions {
-    margin-top: clamp(40px, 11vmin, 88px);
+    margin-top: clamp(16px, 4vmin, 32px);
   }
 }
 
@@ -212,10 +201,6 @@
 
   .title {
     font-size: 44px;
-  }
-
-  .subtitle {
-    font-size: 16px;
   }
 
   .actions {
@@ -260,10 +245,6 @@
 
   .title {
     font-size: 52px;
-  }
-
-  .subtitle {
-    font-size: 17px;
   }
 }
 

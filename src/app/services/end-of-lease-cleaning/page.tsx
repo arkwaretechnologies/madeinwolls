@@ -46,7 +46,7 @@ export default function EndOfLeaseCleaningPage() {
           { icon: "checkCircle" as IconName, text: "Bond Clean Standard" },
           { icon: "clipboard" as IconName, text: "Checklist & Sign-Off" },
           { icon: "camera" as IconName, text: "Before & After Photos" },
-          { icon: "star" as IconName, text: "125 Google Reviews" },
+          { icon: "star" as IconName, text: "Trusted by 100+ families" },
         ]}
         suburbs={[
           "Wollstonecraft", "Crows Nest", "Neutral Bay", "Mosman", "Cammeray",
