@@ -54,8 +54,9 @@ export default function RootLayout({
     >
       <body style={{ fontFamily: "var(--font-jakarta), sans-serif" }}>
         <Providers>{children}</Providers>
-        <Script id="tawk-to" strategy="afterInteractive">
-          {`
+        {process.env.NODE_ENV === "production" && (
+          <Script id="tawk-to" strategy="afterInteractive">
+            {`
             var Tawk_API=Tawk_API||{}, Tawk_LoadStart=new Date();
             (function(){
             var s1=document.createElement("script"),s0=document.getElementsByTagName("script")[0];
@@ -66,7 +67,8 @@ export default function RootLayout({
             s0.parentNode.insertBefore(s1,s0);
             })();
           `}
-        </Script>
+          </Script>
+        )}
       </body>
     </html>
   );
