@@ -1,36 +1,34 @@
 "use client";
 
-import { useBookModal } from "./BookModalProvider";
-import type { ButtonHTMLAttributes, ReactNode } from "react";
+import type { AnchorHTMLAttributes, MouseEvent, ReactNode } from "react";
 
 type BookOpenButtonProps = {
   className?: string;
   children: ReactNode;
-  /** Runs before the modal opens (e.g. close mobile nav). */
+  href?: string;
+  /** Runs before navigation (e.g. close mobile nav). */
   onBeforeOpen?: () => void;
-} & Omit<ButtonHTMLAttributes<HTMLButtonElement>, "type">;
+} & Omit<AnchorHTMLAttributes<HTMLAnchorElement>, "href">;
 
 export default function BookOpenButton({
   className,
   children,
+  href = "/book-now",
   onBeforeOpen,
   onClick,
   ...rest
 }: BookOpenButtonProps) {
-  const { open } = useBookModal();
-
   return (
-    <button
-      type="button"
+    <a
+      href={href}
       className={className}
       {...rest}
-      onClick={(e) => {
+      onClick={(e: MouseEvent<HTMLAnchorElement>) => {
         onBeforeOpen?.();
         onClick?.(e);
-        open();
       }}
     >
       {children}
-    </button>
+    </a>
   );
 }

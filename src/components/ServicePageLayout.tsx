@@ -16,11 +16,15 @@ interface ServicePageLayoutProps {
   intro: string;
   inclusions: string[];
   pricing: PricingTier[];
-  trustBadges: { icon: IconName; text: string }[];
+  trustBadges?: { icon: IconName; text: string }[];
   suburbs: string[];
   whyChoose?: { title: string; items: string[] };
   heroImage?: { src: string; alt: string; position?: string };
   sideImages?: { src: string; alt: string }[];
+  /** When set with two side images, shows them in one row with Before / After labels. */
+  sideImagesLayout?: "stack" | "compare";
+  /** Trust badges + book button after pricing. Set false when redundant (e.g. CTA after gallery). */
+  showPostPricingFooter?: boolean;
 }
 
 export default function ServicePageLayout({
@@ -28,12 +32,18 @@ export default function ServicePageLayout({
   intro,
   inclusions,
   pricing,
-  trustBadges,
+  trustBadges = [],
   suburbs,
   whyChoose,
   heroImage,
   sideImages,
+  sideImagesLayout = "stack",
+  showPostPricingFooter = true,
 }: ServicePageLayoutProps) {
+  const isCompare =
+    sideImagesLayout === "compare" &&
+    sideImages &&
+    sideImages.length === 2;
   const heroStyle = heroImage
     ? ({
         ["--hero-bg" as never]: `url(${heroImage.src})`,
@@ -70,8 +80,12 @@ export default function ServicePageLayout({
       </section>
 
       <section className={styles.content}>
-        <div className={styles.contentInner}>
-          <div className={styles.contentGrid}>
+        <div
+          className={`${styles.contentInner} ${isCompare ? styles.contentInnerWide : ""}`}
+        >
+          <div
+            className={`${styles.contentGrid} ${isCompare ? styles.contentGridCompare : ""}`}
+          >
             <div className={styles.contentMain}>
               <div className={styles.sectionLabel}>What&apos;s Included</div>
               <h2 className={styles.sectionHeading}>Everything in Your Clean</h2>
@@ -97,6 +111,41 @@ export default function ServicePageLayout({
                     ))}
                   </div>
                 </>
+              )}
+
+              {isCompare && sideImages && sideImages.length === 2 && (
+                <div className={styles.compareCtaBlock}>
+                  <div className={styles.divider} />
+                  <aside
+                    className={`${styles.contentSide} ${styles.contentSideCompare}`}
+                    aria-label="Before and after example"
+                  >
+                    {(["Before", "After"] as const).map((label, i) => {
+                      const img = sideImages[i]!;
+                      return (
+                        <div key={img.src} className={styles.compareCell}>
+                          <span className={styles.compareLabel}>{label}</span>
+                          <div
+                            className={`${styles.sideImageCard} ${styles.sideImageCardCompare}`}
+                          >
+                            <Image
+                              src={img.src}
+                              alt={img.alt}
+                              fill
+                              sizes="(max-width: 1023px) 45vw, 640px"
+                              className={`${styles.sideImage} ${styles.sideImagePortrait}`}
+                            />
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </aside>
+                  <div className={styles.compareBookRow}>
+                    <BookOpenButton className={styles.heroBtn}>
+                      Book This Service →
+                    </BookOpenButton>
+                  </div>
+                </div>
               )}
 
               <div className={styles.divider} />
@@ -125,25 +174,29 @@ export default function ServicePageLayout({
                 ))}
               </div>
 
-              <div className={styles.trustLine}>
-                {trustBadges.map((badge) => (
-                  <div key={badge.text} className={styles.trustBadge}>
-                    <span className={styles.trustIcon}>
-                      <Icon name={badge.icon} size={18} />
-                    </span>
-                    <span>{badge.text}</span>
+              {showPostPricingFooter && (
+                <>
+                  <div className={styles.trustLine}>
+                    {trustBadges.map((badge) => (
+                      <div key={badge.text} className={styles.trustBadge}>
+                        <span className={styles.trustIcon}>
+                          <Icon name={badge.icon} size={18} />
+                        </span>
+                        <span>{badge.text}</span>
+                      </div>
+                    ))}
                   </div>
-                ))}
-              </div>
 
-              <div style={{ textAlign: "center", marginTop: 32 }}>
-                <BookOpenButton className={styles.heroBtn}>
-                  Book This Service →
-                </BookOpenButton>
-              </div>
+                  <div style={{ textAlign: "center", marginTop: 32 }}>
+                    <BookOpenButton className={styles.heroBtn}>
+                      Book This Service →
+                    </BookOpenButton>
+                  </div>
+                </>
+              )}
             </div>
 
-            {sideImages && sideImages.length > 0 && (
+            {sideImages && sideImages.length > 0 && !isCompare && (
               <aside className={styles.contentSide} aria-label="Service gallery">
                 {sideImages.slice(0, 3).map((img) => (
                   <div key={img.src} className={styles.sideImageCard}>

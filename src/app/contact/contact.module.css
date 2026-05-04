@@ -212,6 +212,33 @@
   background: var(--green-mid);
 }
 
+.formBtn:disabled {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+.formFeedbackSuccess {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--green);
+  margin: 0;
+  padding: 12px 14px;
+  background: rgba(45, 80, 22, 0.08);
+  border-radius: 12px;
+}
+
+.formFeedbackError {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  color: #b42318;
+  margin: 0;
+  padding: 12px 14px;
+  background: rgba(180, 35, 24, 0.08);
+  border-radius: 12px;
+}
+
 .formNote {
   font-family: var(--font-inter), sans-serif;
   font-size: 12px;

@@ -28,8 +28,9 @@ export default function RegularCleaningPage() {
           position: "center 22%",
         }}
         sideImages={[
-          { src: "/MIW-imagesoutput/IMG_0158.jpeg", alt: "Cleaning detail work" },
-          { src: "/MIW-imagesoutput/IMG_0159.jpeg", alt: "Fresh, tidy home finish" },
+          { src: "/Services-images/Home%20Cleaning/1.jpg", alt: "Example — home cleaning result" },
+          { src: "/Services-images/Bathroom%20Cleaning/1.jpg", alt: "Example — bathroom clean" },
+          { src: "/Services-images/Bathroom%20Cleaning/2.jpg", alt: "Example — bathroom detail" },
         ]}
         inclusions={[
           "Full kitchen clean — benchtops, stovetop, appliances, sink and floor",

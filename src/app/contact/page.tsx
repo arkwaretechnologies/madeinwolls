@@ -3,6 +3,7 @@ import Link from "next/link";
 import Navbar from "@/components/Navbar";
 import TrustBar from "@/components/TrustBar";
 import Footer from "@/components/Footer";
+import ContactForm from "@/components/ContactForm";
 import styles from "./contact.module.css";
 
 export const metadata: Metadata = {
@@ -104,78 +105,7 @@ export default function ContactPage() {
               <div className={styles.label}>Quick Enquiry</div>
               <h2 className={styles.heading}>Send Us a Message</h2>
 
-              <form className={styles.form}>
-                <div className={styles.formRow}>
-                  <div className={styles.formGroup}>
-                    <label className={styles.formLabel}>First Name</label>
-                    <input
-                      type="text"
-                      className={styles.formInput}
-                      placeholder="Your first name"
-                    />
-                  </div>
-                  <div className={styles.formGroup}>
-                    <label className={styles.formLabel}>Last Name</label>
-                    <input
-                      type="text"
-                      className={styles.formInput}
-                      placeholder="Your last name"
-                    />
-                  </div>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Email</label>
-                  <input
-                    type="email"
-                    className={styles.formInput}
-                    placeholder="your@email.com"
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Phone</label>
-                  <input
-                    type="tel"
-                    className={styles.formInput}
-                    placeholder="0400 000 000"
-                  />
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Service Required</label>
-                  <select className={styles.formSelect} defaultValue="">
-                    <option value="" disabled>
-                      Select a service
-                    </option>
-                    <option>Regular Home Cleaning</option>
-                    <option>Spring &amp; Deep Cleaning</option>
-                    <option>End of Lease / Bond Clean</option>
-                    <option>Office &amp; Commercial Cleaning</option>
-                    <option>Airbnb Cleaning</option>
-                    <option>Church Cleaning</option>
-                    <option>Childcare Cleaning</option>
-                    <option>Carpet Cleaning</option>
-                    <option>Other</option>
-                  </select>
-                </div>
-
-                <div className={styles.formGroup}>
-                  <label className={styles.formLabel}>Message</label>
-                  <textarea
-                    className={styles.formTextarea}
-                    rows={5}
-                    placeholder="Tell us about your cleaning needs, suburb, preferred schedule..."
-                  />
-                </div>
-
-                <button type="submit" className={styles.formBtn}>
-                  Send Enquiry →
-                </button>
-                <p className={styles.formNote}>
-                  We will respond within 2 hours during business hours.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>

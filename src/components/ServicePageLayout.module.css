@@ -95,6 +95,11 @@
   margin: 0 auto;
 }
 
+/* Before/after compare: use more of the viewport so portrait shots scale up. */
+.contentInnerWide {
+  max-width: 1320px;
+}
+
 .contentGrid {
   display: grid;
   grid-template-columns: 1fr;
@@ -111,6 +116,47 @@
   gap: 12px;
 }
 
+/* Before | After in one row; full width of .contentInner (see wide + single-column grid). */
+.contentSideCompare {
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  align-items: start;
+  width: 100%;
+  max-width: 100%;
+}
+
+/* Gallery then book (compare only): sits above Pricing */
+.compareCtaBlock {
+  width: 100%;
+}
+
+.compareBookRow {
+  text-align: center;
+  margin-top: 28px;
+}
+
+.compareCell {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.compareLabel {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--secondary);
+  text-align: center;
+  font-family: var(--font-inter), sans-serif;
+}
+
+/* Compare panes: see .sideImageCard.sideImageCardCompare for portrait aspect. */
+.sideImageCardCompare {
+  min-height: 0;
+}
+
 .sideImageCard {
   position: relative;
   width: 100%;
@@ -122,8 +168,18 @@
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
 }
 
+/* After .sideImageCard: base is landscape 4/3; before/after are vertical (portrait) photos. */
+.sideImageCard.sideImageCardCompare {
+  aspect-ratio: 3 / 4;
+}
+
 .sideImage {
   object-fit: cover;
+  object-position: center;
+}
+
+.sideImage.sideImagePortrait {
+  object-fit: contain;
   object-position: center;
 }
 
@@ -310,6 +366,10 @@
 }
 
 @media (min-width: 768px) {
+  .contentSideCompare {
+    gap: 16px;
+  }
+
   .heroSection {
     padding: 64px 40px 72px;
   }
@@ -358,9 +418,21 @@
     align-items: start;
   }
 
+  /* Compare: stack — copy full width, gallery row uses full wide inner width below. */
+  .contentGridCompare {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
   .contentSide {
     position: sticky;
     top: 110px;
+  }
+
+  /* Before/after compare: stay in document flow (sticky overlaps pricing row). */
+  .contentSide.contentSideCompare {
+    position: static;
+    top: auto;
   }
 
   .sectionHeading {

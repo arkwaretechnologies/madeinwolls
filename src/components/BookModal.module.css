@@ -69,12 +69,11 @@
   overscroll-behavior: contain;
 }
 
-/* Tall enough for multi-step BookingKoala embed; outer .frameWrap scrolls. */
+/* iframe-resizer sets height; keep modest min until measured */
 .iframe {
   display: block;
   width: 100%;
-  min-height: 720px;
-  height: clamp(1400px, 220vh, 4200px);
+  min-height: 360px;
   border: none;
 }
 

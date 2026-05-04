@@ -1,0 +1,227 @@
+.wrap {
+  margin-top: 48px;
+  padding-top: 48px;
+  border-top: 1px solid var(--stone);
+}
+
+.intro {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--grey);
+  max-width: 640px;
+  margin-bottom: 28px;
+}
+
+@keyframes addonReveal {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.heading {
+  font-size: 22px;
+  font-weight: 800;
+  color: var(--charcoal);
+  letter-spacing: -0.03em;
+  margin-bottom: 8px;
+  animation: addonReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+.sub {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  color: var(--secondary);
+  margin-bottom: 24px;
+  animation: addonReveal 0.65s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: 0.07s;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.card {
+  --lift: -5px;
+  --shadow-rest: 0 2px 8px rgba(28, 28, 28, 0.04);
+  --shadow-hover: 0 14px 32px rgba(45, 80, 22, 0.12);
+
+  background: var(--white);
+  border: 1px solid var(--stone);
+  border-radius: 14px;
+  padding: 18px 14px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+  transform: translateZ(0);
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1),
+    border-color 0.3s ease,
+    box-shadow 0.35s cubic-bezier(0.34, 1.3, 0.64, 1);
+  box-shadow: var(--shadow-rest);
+  animation: cardEnter 0.58s cubic-bezier(0.22, 1, 0.36, 1) both;
+  animation-delay: var(--enter-delay, 0ms);
+}
+
+.card:hover {
+  border-color: rgba(45, 80, 22, 0.42);
+  box-shadow: var(--shadow-hover);
+  transform: translateY(var(--lift));
+}
+
+.iconWrap {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--green-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  transition:
+    transform 0.35s cubic-bezier(0.34, 1.3, 0.64, 1),
+    background 0.3s ease,
+    box-shadow 0.35s ease;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.65);
+}
+
+.card:hover .iconWrap {
+  transform: scale(1.08);
+  background: color-mix(in srgb, var(--green-light) 88%, var(--green));
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.55),
+    0 4px 14px rgba(45, 80, 22, 0.12);
+}
+
+.iconSvg {
+  color: var(--green);
+  transition:
+    transform 0.4s cubic-bezier(0.34, 1.45, 0.64, 1),
+    color 0.3s ease;
+}
+
+.card:hover .iconSvg {
+  transform: rotate(-7deg) scale(1.06);
+  color: var(--green-mid);
+}
+
+.title {
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--charcoal);
+  letter-spacing: -0.02em;
+  line-height: 1.35;
+  transition: color 0.25s ease;
+}
+
+.card:hover .title {
+  color: var(--green);
+}
+
+.price {
+  font-family: var(--font-inter), sans-serif;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--sage);
+  transition: color 0.25s ease, transform 0.3s cubic-bezier(0.34, 1.3, 0.64, 1);
+}
+
+.card:hover .price {
+  color: var(--green-mid);
+  transform: translateY(-1px);
+}
+
+@media (min-width: 520px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (min-width: 900px) {
+  .heading {
+    font-size: 26px;
+  }
+
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+  }
+
+  .card {
+    padding: 20px 12px;
+    min-height: 168px;
+    justify-content: flex-start;
+  }
+
+  .title {
+    font-size: 14px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .wrap {
+    margin-top: 56px;
+    padding-top: 56px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .heading,
+  .sub {
+    animation: none;
+  }
+
+  .card {
+    animation: none;
+  }
+
+  .card:hover {
+    transform: none;
+  }
+
+  .card:hover .iconWrap {
+    transform: none;
+  }
+
+  .card:hover .iconSvg {
+    transform: none;
+  }
+
+  .card:hover .price {
+    transform: none;
+  }
+
+  .card {
+    transition:
+      border-color 0.2s ease,
+      box-shadow 0.2s ease;
+  }
+
+  .iconWrap,
+  .iconSvg,
+  .title,
+  .price {
+    transition: none;
+  }
+}

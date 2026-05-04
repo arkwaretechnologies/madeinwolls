@@ -5,7 +5,9 @@ import ServiceCard from "@/components/ServiceCard";
 import QuoteStrip from "@/components/QuoteStrip";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
+import AddOnServices from "@/components/AddOnServices";
 import { type IconName } from "@/components/Icon";
+import { ADD_ON_SERVICES } from "@/constants/addOnServices";
 import styles from "./services.module.css";
 
 export const metadata: Metadata = {
@@ -112,6 +114,7 @@ export default function ServicesPage() {
               <ServiceCard key={svc.name} {...svc} />
             ))}
           </div>
+          <AddOnServices items={ADD_ON_SERVICES} />
         </div>
       </section>
 

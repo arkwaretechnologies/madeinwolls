@@ -7,6 +7,9 @@ import { type IconName } from "@/components/Icon";
 
 import { PRICING_DATA } from "@/constants/pricing";
 
+/** Paths under public/ — folder name contains a space */
+const OFFICE_IMG = "/Services-images/Office%20Cleaning";
+
 export const metadata: Metadata = {
   title: "Office Cleaning Sydney | Commercial Cleaning | Made in Wolls",
   description:
@@ -27,8 +30,9 @@ export default function OfficeCleaningPage() {
           alt: "Office and commercial cleaning service",
         }}
         sideImages={[
-          { src: "/MIW-imagesoutput/0E363401-1210-4699-8A17-8F35B14BFFAC.jpeg", alt: "Professional cleaning standard" },
-          { src: "/MIW-imagesoutput/2DF8004A-14DF-4B19-9A85-7236D138D0AF.jpeg", alt: "Spotless workspace finish" },
+          { src: `${OFFICE_IMG}/1.jpg`, alt: "Office cleaning example" },
+          { src: `${OFFICE_IMG}/2.jpg`, alt: "Commercial workspace cleaning example" },
+          { src: `${OFFICE_IMG}/3.jpg`, alt: "Professional office clean example" },
         ]}
         inclusions={[
           "Reception, common areas and meeting rooms",

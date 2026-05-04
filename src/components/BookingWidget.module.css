@@ -1,0 +1,18 @@
+.widgetShell {
+  width: 100%;
+  min-width: 0;
+  background: var(--white);
+}
+
+.iframe {
+  display: block;
+  width: 100%;
+  min-height: 760px;
+  border: none;
+}
+
+@media (max-width: 767px) {
+  .iframe {
+    min-height: 680px;
+  }
+}
