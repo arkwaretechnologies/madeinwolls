@@ -167,54 +167,6 @@
   margin-top: 8px;
 }
 
-.cleanerGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 16px;
-  margin: 32px 0;
-}
-
-.cleanerCard {
-  background: white;
-  padding: 24px;
-  border-radius: 16px;
-  text-align: center;
-  border: 1px solid var(--stone);
-  transition: transform 0.2s, box-shadow 0.2s;
-}
-
-.cleanerCard:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
-}
-
-.cleanerAvatar {
-  width: 50px;
-  height: 50px;
-  background: var(--green-light);
-  color: var(--green);
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 800;
-  margin: 0 auto 12px;
-  font-size: 18px;
-}
-
-.cleanerName {
-  font-size: 16px;
-  font-weight: 700;
-  color: var(--charcoal);
-  margin-bottom: 4px;
-}
-
-.cleanerRole {
-  font-size: 12px;
-  color: var(--grey);
-  font-weight: 500;
-}
-
 .trustBadges {
   display: flex;
   flex-wrap: wrap;
@@ -259,11 +211,6 @@
     width: 240px;
     height: 300px;
     font-size: 28px;
-  }
-
-  .cleanerGrid {
-    grid-template-columns: repeat(4, 1fr);
-    gap: 24px;
   }
 
   .memberName {

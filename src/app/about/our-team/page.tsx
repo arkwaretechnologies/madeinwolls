@@ -5,6 +5,7 @@ import Navbar from "@/components/Navbar";
 import CTABlock from "@/components/CTABlock";
 import Footer from "@/components/Footer";
 import FounderExperimental from "@/components/FounderExperimental";
+import TeamPhotoGallery from "@/components/TeamPhotoGallery";
 import styles from "./team.module.css";
 
 export const metadata: Metadata = {
@@ -13,11 +14,10 @@ export const metadata: Metadata = {
     "Meet the team behind Made in Wolls. Police-checked, professionally trained and genuinely proud of the work they do.",
 };
 
-const cleaners = [
-  { name: "Sasha", role: "Senior Cleaner", initial: "S" },
-  { name: "Elena", role: "Cleaning Professional", initial: "E" },
-  { name: "John", role: "Cleaning Professional", initial: "J" },
-  { name: "Maria", role: "Cleaning Professional", initial: "M" },
+const teamPhotos: { src: string; alt: string }[] = [
+  { src: "/images/TeamPhoto/TeamPhoto.JPG", alt: "Made in Wolls cleaning team" },
+  { src: "/images/TeamPhoto/Teamphoto2.JPG", alt: "Made in Wolls professional cleaners" },
+  { src: "/images/TeamPhoto/Teamphoto3.JPG", alt: "Made in Wolls team" },
 ];
 
 export default function OurTeamPage() {
@@ -66,15 +66,7 @@ export default function OurTeamPage() {
               in Wolls.
             </p>
 
-            <div className={styles.cleanerGrid}>
-              {cleaners.map((cleaner) => (
-                <div key={cleaner.name} className={styles.cleanerCard}>
-                  <div className={styles.cleanerAvatar}>{cleaner.initial}</div>
-                  <h3 className={styles.cleanerName}>{cleaner.name}</h3>
-                  <p className={styles.cleanerRole}>{cleaner.role}</p>
-                </div>
-              ))}
-            </div>
+            <TeamPhotoGallery photos={teamPhotos} />
           </div>
         </div>
       </section>
