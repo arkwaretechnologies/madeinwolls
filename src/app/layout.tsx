@@ -31,6 +31,11 @@ export const metadata: Metadata = {
     "Premium house cleaning services in Sydney. Police-checked, fully insured team. Regular, spring, end of lease, office, Airbnb cleaning. Trusted by 100+ families. 4.9/5 rating. We Clean, We Commit.",
   keywords:
     "premium house cleaning Sydney, house cleaning services Sydney, professional cleaners Sydney, cleaning services North Shore, cleaning services Northern Beaches, home cleaning Wollstonecraft, police checked cleaners Sydney",
+  icons: {
+    icon: "/MIW%20favicon.ico",
+    shortcut: "/MIW%20favicon.ico",
+    apple: "/MIW%20favicon.ico",
+  },
   openGraph: {
     title: "Made in Wolls — Premium House Cleaning Services Sydney",
     description:
