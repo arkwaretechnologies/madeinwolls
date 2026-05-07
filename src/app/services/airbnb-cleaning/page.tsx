@@ -27,8 +27,9 @@ export default function AirbnbCleaningPage() {
           alt: "Airbnb turnaround cleaning service",
         }}
         sideImages={[
-          { src: "/MIW-imagesoutput/IMG_0178.jpeg", alt: "Guest-ready presentation" },
-          { src: "/MIW-imagesoutput/590D8BCB-88C7-4DDE-8D7F-3D5DC1F7C7AD.jpeg", alt: "Fresh linens and tidy finish" },
+          { src: "/Services-images/Airbnb/airbnb1.jpg", alt: "Airbnb sample clean - living and bedroom ready" },
+          { src: "/Services-images/Airbnb/airbnb2.jpg", alt: "Airbnb sample clean - guest-ready kitchen and bath" },
+          { src: "/Services-images/Airbnb/airbnb3.jpg", alt: "Airbnb sample clean - fresh setup for check-in" },
         ]}
         inclusions={[
           "Full property clean to hotel standard",
