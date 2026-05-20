@@ -10,7 +10,7 @@ import { PRICING_DATA } from "@/constants/pricing";
 export const metadata: Metadata = {
   title: "Spring Cleaning Sydney | Deep Clean | Made in Wolls",
   description:
-    "Comprehensive spring and deep cleaning across Sydney. Top to bottom, every surface, every corner. Police-checked team. From $280.",
+    "Comprehensive spring and deep cleaning across Sydney. Top to bottom, every surface, every corner. Police-checked team. From $310.",
 };
 
 export default function SpringCleaningPage() {

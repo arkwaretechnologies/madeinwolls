@@ -8,7 +8,7 @@ import { PRICING_DATA } from "@/constants/pricing";
 export const metadata: Metadata = {
   title: "End of Lease Cleaning Sydney | Bond Clean | Made in Wolls",
   description:
-    "Professional end of lease and bond cleaning across Sydney. Inspection-ready standard with checklist, sign-off and photos. From $320.",
+    "Professional end of lease and bond cleaning across Sydney. Inspection-ready standard with checklist, sign-off and photos. From $369.",
 };
 
 export default function EndOfLeaseCleaningPage() {

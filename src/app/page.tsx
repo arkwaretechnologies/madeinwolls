@@ -18,7 +18,7 @@ const services: { icon: IconName; name: string; price: string; desc: string; hre
   {
     icon: "key",
     name: "End of Lease & Bond Cleaning",
-    price: "From $320 — Inspection ready",
+    price: "From $369 — Inspection ready",
     desc: "Checklist, sign-off & photos included",
     href: "/services/end-of-lease-cleaning",
     highlight: true,
@@ -26,21 +26,21 @@ const services: { icon: IconName; name: string; price: string; desc: string; hre
   {
     icon: "home",
     name: "Regular Home Cleaning",
-    price: "From $140",
+    price: "From $154",
     desc: "Weekly, fortnightly or monthly",
     href: "/services/regular-cleaning",
   },
   {
     icon: "sparkles",
     name: "Spring & Deep Clean",
-    price: "From $280",
+    price: "From $310",
     desc: "Top to bottom, every corner",
     href: "/services/spring-cleaning",
   },
   {
     icon: "house",
     name: "Airbnb Cleaning",
-    price: "From $140",
+    price: "From $154",
     desc: "Fast turnaround, guest-ready",
     href: "/services/airbnb-cleaning",
   },

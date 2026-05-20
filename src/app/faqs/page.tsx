@@ -21,7 +21,7 @@ const faqs = [
   {
     question: "How much does a house clean cost in Sydney?",
     answer:
-      "Our flat-rate regular cleans start from $140 for a 1 to 2 bedroom home, $210 for 3 bedrooms and $295 for 4 or more bedrooms. End of lease bond cleans start from $320. Visit our pricing page for a full breakdown or book directly for an instant quote.",
+      "Our flat-rate regular cleans start from $154 for a 1 to 2 bedroom home, $231 for 3 bedrooms and $325 for 4 or more bedrooms. End of lease bond cleans start from $369. Visit our pricing page for a full breakdown or book directly for an instant quote.",
   },
   {
     question: "Do you offer end of lease cleaning on the North Shore?",

@@ -14,17 +14,17 @@ export const ADD_ON_SERVICES: {
   {
     icon: "clipboard",
     title: "Oven deep clean",
-    price: "Quoted when booking",
+    price: "$99",
   },
   {
     icon: "house",
     title: "Fridge deep clean",
-    price: "Quoted when booking",
+    price: "$70",
   },
   {
     icon: "broom",
     title: "Carpet steam clean (per room or area)",
-    price: "$40 / room",
+    price: "$60 / room",
   },
   {
     icon: "minus",
@@ -59,7 +59,7 @@ export const ADD_ON_SERVICES: {
   {
     icon: "house",
     title: "Inside fridge",
-    price: "$60",
+    price: "$70",
   },
   {
     icon: "checkCircle",

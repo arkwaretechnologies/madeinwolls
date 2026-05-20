@@ -10,7 +10,7 @@ import { PRICING_DATA } from "@/constants/pricing";
 export const metadata: Metadata = {
   title: "Regular Home Cleaning Sydney | Made in Wolls",
   description:
-    "Professional regular home cleaning services across Sydney. Weekly, fortnightly or monthly. Police-checked, fully insured team. From $140.",
+    "Professional regular home cleaning services across Sydney. Weekly, fortnightly or monthly. Police-checked, fully insured team. From $154.",
 };
 
 export default function RegularCleaningPage() {

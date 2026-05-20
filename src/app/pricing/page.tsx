@@ -12,7 +12,7 @@ import styles from "./pricing.module.css";
 export const metadata: Metadata = {
   title: "Pricing | Made in Wolls Cleaning Services Sydney",
   description:
-    "Transparent, flat-rate pricing for all cleaning services. Regular cleaning from $140, spring cleaning from $280, bond cleaning from $320.",
+    "Transparent, flat-rate pricing for all cleaning services. Regular cleaning from $154, spring cleaning from $310, bond cleaning from $369.",
 };
 
 export default function PricingPage() {
