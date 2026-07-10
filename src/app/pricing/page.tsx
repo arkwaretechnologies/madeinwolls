@@ -12,7 +12,7 @@ import styles from "./pricing.module.css";
 export const metadata: Metadata = {
   title: "Pricing | Made in Wolls Cleaning Services Sydney",
   description:
-    "Transparent, flat-rate pricing for all cleaning services. Regular cleaning from $154, spring cleaning from $310, bond cleaning from $369.",
+    "Transparent, flat-rate pricing for all cleaning services. Regular cleaning from $154, spring cleaning from $499, bond cleaning from $369.",
 };
 
 export default function PricingPage() {
@@ -95,6 +95,10 @@ export default function PricingPage() {
                   </FadeIn>
                 ))}
               </div>
+
+              {cat.pricingNote && (
+                <p className={styles.pricingNote}>{cat.pricingNote}</p>
+              )}
             </div>
           ))}
 

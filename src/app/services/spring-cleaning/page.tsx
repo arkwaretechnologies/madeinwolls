@@ -10,8 +10,14 @@ import { PRICING_DATA } from "@/constants/pricing";
 export const metadata: Metadata = {
   title: "Spring Cleaning Sydney | Deep Clean | Made in Wolls",
   description:
-    "Comprehensive spring and deep cleaning across Sydney. Top to bottom, every surface, every corner. Police-checked team. From $310.",
+    "Comprehensive spring and deep cleaning across Sydney. Top to bottom, every surface, every corner. Police-checked team. From $499.",
 };
+
+const SPRING_POPULAR_ADD_ONS = [
+  { item: "Inside fridge", price: "$90" },
+  { item: "Rangehood", price: "$40" },
+  { item: "Wall / door / door frame spot clean", price: "$40 (30 min) / $70 (1 hr)" },
+];
 
 export default function SpringCleaningPage() {
   const serviceData = PRICING_DATA.find(p => p.service === "Spring & Deep Cleaning");
@@ -34,15 +40,15 @@ export default function SpringCleaningPage() {
         inclusions={[
           "Everything included in a regular clean — plus:",
           "Inside oven — racks, walls, door glass and seals",
-          "Inside fridge — shelves, drawers and door seals",
           "Inside all cupboards and drawers throughout",
-          "Ceiling fans, air vents and exhaust fans",
+          "Ceiling fans and air vents",
           "All window tracks, frames and sills",
           "Behind and under all appliances",
           "Tile grout scrubbed in bathrooms",
-          "Spot clean all walls, doors and door frames",
         ]}
+        popularAddOns={SPRING_POPULAR_ADD_ONS}
         pricing={serviceData?.tiers || []}
+        pricingNote={serviceData?.pricingNote}
         trustBadges={[
           { icon: "checkCircle" as IconName, text: "Police-Checked" },
           { icon: "shield" as IconName, text: "Fully Insured" },

@@ -24,6 +24,12 @@ const faqs = [
       "Our flat-rate regular cleans start from $154 for a 1 to 2 bedroom home, $231 for 3 bedrooms and $325 for 4 or more bedrooms. End of lease bond cleans start from $369. Visit our pricing page for a full breakdown or book directly for an instant quote.",
   },
   {
+    question:
+      "Does my spring clean include everything listed under \"Everything in Your Clean\" automatically?",
+    answer:
+      "Yes — everything listed under \"Everything in Your Clean\" is included in your spring clean at the base price for your home size, including inside the oven and inside all cupboards & drawers. Inside fridge, rangehood cleaning and wall spot-cleaning are optional add-ons, priced individually and shown at checkout — add only what your home needs.",
+  },
+  {
     question: "Do you offer end of lease cleaning on the North Shore?",
     answer:
       "Yes. We specialise in end of lease and bond cleans across the Lower North Shore including Wollstonecraft, Crows Nest, Neutral Bay, Mosman, Cammeray and surrounding suburbs. Every bond clean is completed to rental inspection standard.",

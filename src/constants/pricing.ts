@@ -13,6 +13,7 @@ export interface PricingCategory {
   icon: IconName;
   href: string;
   tiers: PricingTier[];
+  pricingNote?: string;
 }
 
 export const PRICING_DATA: PricingCategory[] = [
@@ -46,10 +47,12 @@ export const PRICING_DATA: PricingCategory[] = [
     service: "Spring & Deep Cleaning",
     icon: "sparkles",
     href: "/services/spring-cleaning",
+    pricingNote:
+      "Most 3-bedroom, 2-bathroom homes typically range $700–$850 depending on layout and add-ons.",
     tiers: [
-      { name: "Essential", price: "$310", desc: "1–2 bedrooms" },
-      { name: "Standard", price: "$429", desc: "3 bedrooms" },
-      { name: "Premium", price: "$572", desc: "4+ bedrooms" },
+      { name: "Essential", price: "$499", desc: "1–2 bedrooms" },
+      { name: "Standard", price: "$639", desc: "3 bedrooms" },
+      { name: "Premium", price: "$799", desc: "4+ bedrooms" },
     ],
   },
   {
@@ -110,10 +113,11 @@ export const PRICING_DATA: PricingCategory[] = [
 
 export const ADD_ONS = [
   { item: "Inside Oven Clean", price: "$99", notes: "Pre-book required" },
-  { item: "Inside Fridge Clean", price: "$70", notes: "Must be emptied by client" },
+  { item: "Inside Fridge Clean", price: "$90", notes: "Must be emptied by client" },
   { item: "Inside All Cupboards & Drawers", price: "$65", notes: "Per floor level" },
-  { item: "Wall Spot Clean", price: "$30", notes: "Scuffs & marks only" },
-  { item: "Carpet Steam Cleaning", price: "$60 per room", notes: "" },
+  { item: "Rangehood Clean", price: "$40", notes: "" },
+  { item: "Wall Spot Clean", price: "$40 (30 min) / $70 (1 hr)", notes: "Walls, doors and door frames" },
+  { item: "Carpet Steam Cleaning", price: "$70 per room", notes: "" },
   { item: "Internal Windows (1–3 bed)", price: "$60", notes: "1 hr labour" },
   { item: "Internal Windows (4–6 bed)", price: "$120", notes: "2 hrs labour" },
   { item: "External Windows (1–3 bed)", price: "$60", notes: "1 hr labour" },

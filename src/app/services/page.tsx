@@ -27,7 +27,7 @@ const services: { icon: IconName; name: string; price: string; desc: string; hre
   {
     icon: "sparkles",
     name: "Spring & Deep Cleaning",
-    price: "From $310",
+    price: "From $499",
     desc: "Top to bottom, every surface, every corner",
     href: "/services/spring-cleaning",
   },

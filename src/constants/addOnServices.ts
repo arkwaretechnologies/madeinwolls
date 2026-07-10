@@ -19,12 +19,17 @@ export const ADD_ON_SERVICES: {
   {
     icon: "house",
     title: "Fridge deep clean",
-    price: "$70",
+    price: "$90",
   },
   {
     icon: "broom",
     title: "Carpet steam clean (per room or area)",
-    price: "$60 / room",
+    price: "$70 / room",
+  },
+  {
+    icon: "clipboard",
+    title: "Rangehood cleaning",
+    price: "$40",
   },
   {
     icon: "minus",
@@ -59,7 +64,7 @@ export const ADD_ON_SERVICES: {
   {
     icon: "house",
     title: "Inside fridge",
-    price: "$70",
+    price: "$90",
   },
   {
     icon: "checkCircle",
@@ -69,12 +74,12 @@ export const ADD_ON_SERVICES: {
   {
     icon: "checkCircle",
     title: "Spot clean walls — 30 minutes",
-    price: "$30",
+    price: "$40",
   },
   {
     icon: "checkCircle",
     title: "Spot clean walls — 1 hour",
-    price: "$60",
+    price: "$70",
   },
   {
     icon: "checkCircle",

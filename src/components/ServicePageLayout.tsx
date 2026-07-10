@@ -16,6 +16,8 @@ interface ServicePageLayoutProps {
   intro: string;
   inclusions: string[];
   pricing: PricingTier[];
+  popularAddOns?: { item: string; price: string }[];
+  pricingNote?: string;
   trustBadges?: { icon: IconName; text: string }[];
   suburbs: string[];
   whyChoose?: { title: string; items: string[] };
@@ -32,6 +34,8 @@ export default function ServicePageLayout({
   intro,
   inclusions,
   pricing,
+  popularAddOns,
+  pricingNote,
   trustBadges = [],
   suburbs,
   whyChoose,
@@ -113,6 +117,22 @@ export default function ServicePageLayout({
                 </>
               )}
 
+              {popularAddOns && popularAddOns.length > 0 && (
+                <>
+                  <div className={styles.divider} />
+                  <div className={styles.sectionLabel}>Optional Extras</div>
+                  <h2 className={styles.sectionHeading}>Popular Add-Ons</h2>
+                  <div className={styles.addOnList}>
+                    {popularAddOns.map((addon) => (
+                      <div key={addon.item} className={styles.addOnItem}>
+                        <span className={styles.addOnName}>{addon.item}</span>
+                        <span className={styles.addOnPrice}>{addon.price}</span>
+                      </div>
+                    ))}
+                  </div>
+                </>
+              )}
+
               {isCompare && sideImages && sideImages.length === 2 && (
                 <div className={styles.compareCtaBlock}>
                   <div className={styles.divider} />
@@ -173,6 +193,10 @@ export default function ServicePageLayout({
                   </FadeIn>
                 ))}
               </div>
+
+              {pricingNote && (
+                <p className={styles.pricingNote}>{pricingNote}</p>
+              )}
 
               {showPostPricingFooter && (
                 <>
