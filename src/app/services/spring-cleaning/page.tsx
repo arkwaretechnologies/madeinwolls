@@ -14,6 +14,7 @@ export const metadata: Metadata = {
 };
 
 const SPRING_POPULAR_ADD_ONS = [
+  { item: "Inside oven", price: "$99" },
   { item: "Inside fridge", price: "$90" },
   { item: "Rangehood", price: "$40" },
   { item: "Wall / door / door frame spot clean", price: "$40 (30 min) / $70 (1 hr)" },
@@ -39,7 +40,6 @@ export default function SpringCleaningPage() {
         ]}
         inclusions={[
           "Everything included in a regular clean — plus:",
-          "Inside oven — racks, walls, door glass and seals",
           "Inside all cupboards and drawers throughout",
           "Ceiling fans and air vents",
           "All window tracks, frames and sills",

@@ -27,7 +27,7 @@ const faqs = [
     question:
       "Does my spring clean include everything listed under \"Everything in Your Clean\" automatically?",
     answer:
-      "Yes — everything listed under \"Everything in Your Clean\" is included in your spring clean at the base price for your home size, including inside the oven and inside all cupboards & drawers. Inside fridge, rangehood cleaning and wall spot-cleaning are optional add-ons, priced individually and shown at checkout — add only what your home needs.",
+      "Yes — everything listed under \"Everything in Your Clean\" is included in your spring clean at the base price for your home size, including inside all cupboards & drawers. Inside oven, inside fridge, rangehood cleaning and wall spot-cleaning are optional add-ons, priced individually and shown at checkout — add only what your home needs.",
   },
   {
     question: "Do you offer end of lease cleaning on the North Shore?",
