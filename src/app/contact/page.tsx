@@ -9,7 +9,7 @@ import styles from "./contact.module.css";
 export const metadata: Metadata = {
   title: "Contact & Book | Made in Wolls Cleaning Services Sydney",
   description:
-    "Book a clean or get a same-day quote. Call 0410 721 027 or email info@madeinwolls.com. Made in Wolls — We Clean, We Commit.",
+    "Book a clean or get a same-day quote. Call 0410 721 027 or email madeinwolls@gmail.com. Made in Wolls — We Clean, We Commit.",
 };
 
 export default function ContactPage() {
@@ -57,10 +57,10 @@ export default function ContactPage() {
                   <div>
                     <div className={styles.contactLabel}>Email</div>
                     <a
-                      href="mailto:info@madeinwolls.com"
+                      href="mailto:madeinwolls@gmail.com"
                       className={styles.contactValue}
                     >
-                      info@madeinwolls.com
+                      madeinwolls@gmail.com
                     </a>
                     <div className={styles.contactNote}>
                       We respond within 2 hours

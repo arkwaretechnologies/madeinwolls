@@ -51,7 +51,7 @@ export default function Footer() {
                   <Icon name="phone" size={16} /> <a href="tel:0410721027">0410 721 027</a>
                 </div>
                 <div className={styles.contactItem}>
-                  <Icon name="mail" size={16} /> <a href="mailto:info@madeinwolls.com">info@madeinwolls.com</a>
+                  <Icon name="mail" size={16} /> <a href="mailto:madeinwolls@gmail.com">madeinwolls@gmail.com</a>
                 </div>
                 <div className={styles.contactItem}>
                   <Icon name="mapPin" size={16} /> 8/18 Boronia St, Wollstonecraft NSW 2065
